@@ -1,2 +1,2 @@
 # line to add git ignore
-_sites
+_sites/*
