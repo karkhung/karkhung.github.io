@@ -1,0 +1,34 @@
+
+
+# Site settings
+title: Dranyen
+web-url: https://dranyen.s3.amazonaws.com
+description: "Placeholder for site description"
+email: dawapaljor@tibetaction.net
+author: dawa
+lang: bo
+copyright: "&#xA9; 2020"
+
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  timklapdor
+
+permalink: /:year/:title.html
+paginate: 5
+paginate_path: "blog/:num"
+
+#Timezone
+timezone: 
+regenerate: true
+incremental: true
+
+# Build settings
+markdown: kramdown
+
+#Exclude local build settings
+exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
+
+plugins: 
+  - jekyll-admin
+  - jekyll-paginate
+
+

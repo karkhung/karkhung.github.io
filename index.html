@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+{% include header.html %}
+<div class="container">
+	<div class="section-title">
+		<h1>Podcast Demo <i class="fa fa-podcast"></i></h1>
+		<div class="social">
+			{% include share-bar.html %}
+		</div>
+	</div>
+	<section class="full-width">
+		{% for post in site.posts %}
+			{% if post.layout == 'podcast' %}
+				<article class="podcast-list">
+					<img src="/assets/images/{{post.cover}}">
+					<div class="podcast-list-meta">
+						<p><a href="{{ post.url }}">{{ post.title }}</a></p>
+						<span>
+							<i class="fa fa-clock"></i> {{post.duration}} Minutes  |  
+							<i class="fa fa-calendar"></i> {{ site.time | date_to_string  }} 
+						</span>
+						<span>
+							<i class="fa fa-flag"></i>  {{post.category}}
+						</span>
+					</div>
+				</article>
+			{% endif %}
+		{% endfor %}
+	</section>
+	<div class="section-title">
+		<h1>POST <i class="fa fa-newspaper"></i></h1>
+		<p style="color:white" class="paginate">
+			<span>{% if paginator.total_pages > 1 %}
+				  {% if paginator.previous_page %}
+				    <a href="{{ paginator.previous_page_path }}"><i class="fa fa-chevron-left"></i></a>
+				  {% else %}
+				  {% endif %}
+				{% endif %}</span>
+			<span class="paginate-current-page">{{ paginator.page }} / </span>
+			<span class="paginate-total-page">{{ paginator.total_pages }}</span>
+			<span><a href="{{ paginator.next_page_path }}"><i class="fa fa-chevron-right"></i></a></span>
+		</p>
+	</div>
+	
+	<section class="full-width series">
+		
+	</section>
+	<section class="full-width">
+		{% for post in paginator.posts %}
+			<article>
+				<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+				<p class="meta"><span><i class="fa fa-calendar"></i>  {{ site.time | date_to_string  }} / {{post.category}}</span></p>
+				
+				<p>
+				{{post.description}}
+				</p>
+			</article>
+		{% endfor %}
+		
+	</section>
+	
+</div>
+
+{% include footer.html %}

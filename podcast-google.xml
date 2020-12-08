@@ -1,0 +1,36 @@
+---
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>{{ site.title }}</title>
+    <googleplay:owner>dawapaljor@tibetaction.net</googleplay:owner>
+    <googleplay:author>dawa</googleplay:author>
+    <itunes:owner>
+      <itunes:name>dawa</itunes:name>
+      <itunes:email>dawapaljor@tibetaction.net</itunes:email>
+  </itunes:owner>
+  <itunes:image href="{{ site.web-url }}/assets/images/icon-lg.png" />
+    <itunes:category text="Technology" />
+    <description>{{ site.description | xml_escape }}</description>
+    <googleplay:image href="{{ site.web-url }}/assets/images/icon-lg.png"/>
+    <language>en-us</language>
+    <link>https://dranyen.s3.amazonaws.com</link>
+  {% for post in site.posts %}
+   {% if post.layout == 'podcast' %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.description | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <enclosure url="{{ site.web-url }}{{ post.file }}"
+                 type="audio/mpeg" length="{{ post.length }}"/>
+      <itunes:duration>30:00</itunes:duration>
+      <guid isPermaLink="false">{{site.title}}</guid>
+    </item>
+    {% endif %}
+  {% endfor %}
+  </channel>
+</rss>
