@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:lang="bo">
+
+    <channel>
+		<atom:link href="https://dranyen.s3.amazonaws.com/podcast-apple.xml" rel="self" type="application/rss+xml" />
+		<title>karkhung</title>
+		<link>https://dranyen.s3.amazonaws.com/</link>
+		<language>bo</language>
+        <copyright>&#xA9; 2020 karkhung</copyright>
+		<itunes:subtitle></itunes:subtitle>
+        <itunes:author>karkhung</itunes:author>
+         <itunes:email>karkhung21@gmail.com</itunes:email>
+		<itunes:summary>Placeholder for site description</itunes:summary>
+        <description>Placeholder for site description</description>
+		<webMaster>karkhung21@gmail.com (karkhung)</webMaster>
+        <itunes:owner>
+			<itunes:name>karkhung</itunes:name>
+			<itunes:email>karkhung21@gmail.com</itunes:email>
+		</itunes:owner>
+        <itunes:image href="karkhung.cn/assets/images/icon-lg.png" />
+		<itunes:category text="Technology" />
+		<itunes:category text="Society &amp; Culture" />
+        <itunes:category text="Education">
+            <itunes:category text="Educational Technology" />
+        </itunes:category> 
+        <itunes:explicit>no</itunes:explicit>
+		
+
+ 
+
+ 
+        <item>
+            <title>Raging song By Kygo</title>
+            <itunes:author>karkhung</itunes:author>
+            <itunes:subtitle>karkhung: Raging song By Kygo</itunes:subtitle>
+            <itunes:summary>Microsoft and Google have famously been all about software, but that's changed significantly over the last few years. Microsoft and now Google have graduated to making their own hardware. Both companies traditionally licensed (or gave away) their software to run on devices made by other manufacturers. So why the move from software to hardware? BONUS: We geek out for another 20 minutes at the end of the episode discussing the new hardware releases. It's a bit of a response to some of the discussion we had back in episode 1.</itunes:summary>
+            <itunes:image href="karkhung.cn/assets/images/images.jpg" />
+            <enclosure url="karkhung.cn/assets/mp3/raging.mp3" length="74352483" type="audio/mp3"/>
+            <guid isPermaLink="true">karkhung.cn/2016/episode-7.html</guid>
+            <pubDate>Mon, 07 Nov 2016 15:00:00 +0530</pubDate>
+            <itunes:duration>51:35</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>Microsoft and Google have famously been all about software, but that's changed significantly over the last few years. Microsoft and now Google have graduated to making their own hardware. Both companies traditionally licensed (or gave away) their software to run on devices made by other manufacturers. So why the move from software to hardware? BONUS: We geek out for another 20 minutes at the end of the episode discussing the new hardware releases. It's a bit of a response to some of the discussion we had back in episode 1. Microsoft and Google have famously been all about software, but that's changed significantly over the last few years. Microsoft and now Google have graduated to making their own hardware. Both companies traditionally licensed (or gave away) their software to run on devices made by other manufacturers. So why the move from software to hardware? BONUS: We geek out for another 20 minutes at the end of the episode discussing the new hardware releases. It's a bit of a response to some of the discussion we had back in episode 1. Show Notes Available at http://localhost:4000/2016/episode-7.html.</description>
+            <itunes:keywords>hardware, apple, google, microsoft,</itunes:keywords>
+            <itunes:block>no</itunes:block>
+		</item>
+    
+
+ 
+        <item>
+            <title>Can someone explain drones to me?</title>
+            <itunes:author>karkhung</itunes:author>
+            <itunes:subtitle>karkhung: Can someone explain drones to me?</itunes:subtitle>
+            <itunes:summary>Drones seem to be the big thing at the moment but with a battery life of about 20 minutes usage is pretty short. So why are they touted as the next big thing?</itunes:summary>
+            <itunes:image href="karkhung.cn/assets/images/images2.jpg" />
+            <enclosure url="karkhung.cnhttp://link-rot.s3.amazonaws.com/Episode-6.mp3" length="43597097" type="audio/mp3"/>
+            <guid isPermaLink="true">karkhung.cn/2016/episode-6.html</guid>
+            <pubDate>Fri, 21 Oct 2016 16:50:00 +0530</pubDate>
+            <itunes:duration>30:13</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>Drones seem to be the big thing at the moment but with a battery life of about 20 minutes usage is pretty short. So why are they touted as the next big thing? Drones seem to be the big thing at the moment but with a battery life of about 20 minutes usage is pretty short. So why are they touted as the next big thing? Show Notes Available at http://localhost:4000/2016/episode-6.html.</description>
+            <itunes:keywords>drones, privacy, selfie, culture,</itunes:keywords>
+            <itunes:block>no</itunes:block>
+		</item>
+    
+
+ 
+        <item>
+            <title>Learning for Free</title>
+            <itunes:author>karkhung</itunes:author>
+            <itunes:subtitle>karkhung: Learning for Free</itunes:subtitle>
+            <itunes:summary>The internet is an amazing resource of free and available content - so how can we utilise that to learn?</itunes:summary>
+            <itunes:image href="karkhung.cn/assets/images/talk.jpg" />
+            <enclosure url="karkhung.cnhttp://link-rot.s3.amazonaws.com/Episode-5.mp3" length="31024143" type="audio/mp3"/>
+            <guid isPermaLink="true">karkhung.cn/2016/episode-5.html</guid>
+            <pubDate>Tue, 11 Oct 2016 10:10:00 +0530</pubDate>
+            <itunes:duration>32:14</itunes:duration>
+            <itunes:explicit>yes</itunes:explicit>
+            <description>The internet is an amazing resource of free and available content - so how can we utilise that to learn? The internet is an amazing resource of free and available content - so how can we utilise that to learn? Show Notes Available at http://localhost:4000/2016/episode-5.html.</description>
+            <itunes:keywords>tools, web, stack overflow, cloud, labour, uber, facebook, </itunes:keywords>
+            <itunes:block>no</itunes:block>
+		</item>
+    
+
+ 
+        <item>
+            <title>Hiding Behind Technology</title>
+            <itunes:author>karkhung</itunes:author>
+            <itunes:subtitle>karkhung: Hiding Behind Technology</itunes:subtitle>
+            <itunes:summary>Digital technology represents an abstraction from the real world. It technical and programatic nature allow it to hide and conceal what's really happening in our world. </itunes:summary>
+            <itunes:image href="karkhung.cn/assets/images/images2.jpg" />
+            <enclosure url="karkhung.cnhttp://link-rot.s3.amazonaws.com/Episode-4.mp3" length="33306609" type="audio/mp3"/>
+            <guid isPermaLink="true">karkhung.cn/2016/episode-4.html</guid>
+            <pubDate>Tue, 04 Oct 2016 10:10:00 +0530</pubDate>
+            <itunes:duration>34:37</itunes:duration>
+            <itunes:explicit>yes</itunes:explicit>
+            <description>Digital technology represents an abstraction from the real world. It technical and programatic nature allow it to hide and conceal what's really happening in our world.  Digital technology represents an abstraction from the real world. It technical and programatic nature allow it to hide and conceal what's really happening in our world.  Show Notes Available at http://localhost:4000/2016/episode-4.html.</description>
+            <itunes:keywords>technology, VR, refugees, cloud, labour, uber, facebook, </itunes:keywords>
+            <itunes:block>no</itunes:block>
+		</item>
+    
+
+ 
+
+ 
+
+ 
+
+	</channel>
+</rss>

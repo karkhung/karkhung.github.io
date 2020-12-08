@@ -1,16 +1,16 @@
 
 
 # Site settings
-title: Dranyen
-web-url: https://dranyen.s3.amazonaws.com
+title: karkhung
+web-url: karkhung.cn
 description: "Placeholder for site description"
-email: dawapaljor@tibetaction.net
-author: dawa
+email: karkhung21@gmail.com
+author: karkhung
 lang: bo
 copyright: "&#xA9; 2020"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-github_username:  timklapdor
+github_username:  karkhung
 
 permalink: /:year/:title.html
 paginate: 5

@@ -1,0 +1,22 @@
+{
+  "short_name": "Legal Clinic",
+  "name": "Trimleng",
+  "icons": [
+    {
+      "src": "/assets/images/icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/icon-lg.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html?source=pwa",
+  "background_color": "#1d1d1d",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#bfbd09"
+}
