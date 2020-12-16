@@ -1,13 +1,14 @@
 /*
 #c85b03 lightbrown
 #f3d519 yellow;
+#681712 brown
 */
 @font-face {
   font-family: qomo-title;
   src: url(../fonts/Qomolangma-Title.ttf);
 }
 body{
-	background-color: #f7f7f7;
+	background-color: #cf9050;
 	margin:0px;
 	padding:0px;
 	font-family: qomo-title;
@@ -47,7 +48,7 @@ header,footer,.container{
 }
 .social a:hover i{color:#403e3e;}
 header{
-	background-color: #f7f7f7;
+	background-color: #681712;
 	color:  black;
 	background-image: url(/assets/icons/top.png);
 	background-size: 140px;
@@ -83,7 +84,7 @@ vertical-align: middle;
 font-size: 20px;
 }
 .nav-menu a{
-	color:#2169fe;
+	color:#f3d519;
 	padding:5px;
 
 }
@@ -101,12 +102,14 @@ article h1{
 	text-align: left;
 	border-bottom: 3px solid #ff7100;
     padding: 15px 11px;
+    color:#404040;;
 }
 article p{
 	margin:0px 5px;
 	padding:10px 0px;
 	line-height: 25px;
 	word-wrap: break-word;
+	color:#404040;
 }
 .podcast-list{
 	display: grid;
@@ -116,6 +119,7 @@ article p{
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0px 1px 3px gray;
+    background:#3c2218;
 }
 
 .podcast-list img{
@@ -127,7 +131,7 @@ article p{
 	overflow: hidden;
 }
 .podcast-list a{
-	color:#c85b03;
+	color:#f3d519 ;
 }
 .podcast-list-meta span{
 	display: block;
@@ -218,13 +222,10 @@ footer{margin-top:50px;
 background-image: url(/assets/icons/background.jpg);
     background-size: 25px;
     background-repeat: repeat-x;
+    display: flex;
 }
 footer span{
-	padding: 3px 20px;
-    background: #681112;
-    border-radius: 30px;
-    box-shadow: inset 0px 0px 5px #caaa7c;
-    border: 5px solid #f3d519;
+	padding: 3px 20px; 
     color: white;
     font-size: 12px;
 }
@@ -233,7 +234,7 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 }
 .widget{
-	padding:20px;
+	padding:50px 26px;
 }
 .widget a, .widget img{
 	vertical-align: middle;
@@ -324,7 +325,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	.nav-mobile{
 		width:100vw;
 		display:block;
-		background:#98876a;
+		background:#681712;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		position:fixed;
@@ -339,7 +340,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	.nav-mobile .fa{
 		font-size: 25px;
 		padding: 15px;
-		color: #1f1f1f;
+		color: #f3d519 ;
 
 	}
 	header{
