@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Karkhung</title>
+    <googleplay:owner>dolmakyab@gmail.com</googleplay:owner>
+    <googleplay:author>dolmakyab</googleplay:author>
+    <itunes:owner>
+      <itunes:name>dawa</itunes:name>
+      <itunes:email>dawapaljor@tibetaction.net</itunes:email>
+  </itunes:owner>
+  <itunes:image href="/assets/images/icon-lg.png" />
+    <itunes:category text="Technology" />
+    <description>Placeholder for site description</description>
+    <googleplay:image href="/assets/images/icon-lg.png"/>
+    <language>en-us</language>
+    <link>https://karkhung.s3.amazonaws.com/</link>
+  
+   
+    <item>
+      <title>སྐད་ཡིག་ཐོབ་ཐང་།</title>
+      <description>ང་ནི་མེ་ལོང་གི་གཙོ་སྒྲིག་པ་ཡིན། བདག་གིས་མེ་ལོང་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱི་མདུན་དུ་ཡིད་འགུག་ཅིང་སེམས་ཤུགས་འཕེལ་བ། བློ་སྐྱེད་ཐོབ་པ་བཅས་ཀྱི་ཁྱད་ཆོས་འཛོམས་པའི་བརྙན་ཐུང་ཁག་ཅིག་འཇོག་གི་ཡིན། བརྙན་ཐུང་འདི་དག་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱིས་སོ་སོའི་ཉིན་རེའི་འཚོ་བའི་ནང་རང་གི་འཇིག་རྟེན་ལ་རན་པའི་ལྟ་ཚུལ་གསར་བ་དང་བློ་གྲོས་གསར་བ། ཐབས་ལམ་གསར་བ་སོགས་རྙེད་ཐུབ་པའི་རེ་བ་ཆེ། མེ་ལོང་གཙོ་སྒྲིག་པ་སྒང་དཀོན་མཆོག་ནས།</description>
+      <pubDate>Mon, 07 Nov 2016 15:00:00 +0530</pubDate>
+      <enclosure url="https://karkhung.s3.amazonaws.com/audio/episode1.mpeg"
+                 type="audio/mpeg" length="17:6"/>
+      <itunes:duration>30:00</itunes:duration>
+      <guid isPermaLink="false">Karkhung</guid>
+    </item>
+    
+  
+  </channel>
+</rss>

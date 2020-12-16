@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xml:lang="bo">
+
+    <channel>
+		<atom:link href="https://dranyen.s3.amazonaws.com/podcast-apple.xml" rel="self" type="application/rss+xml" />
+		<title>Karkhung</title>
+		<link>https://dranyen.s3.amazonaws.com/</link>
+		<language>bo</language>
+        <copyright>&#xA9; 2020 Karkhung</copyright>
+		<itunes:subtitle></itunes:subtitle>
+        <itunes:author>dawa</itunes:author>
+         <itunes:email></itunes:email>
+		<itunes:summary>Placeholder for site description</itunes:summary>
+        <description>Placeholder for site description</description>
+		<webMaster> (dawa)</webMaster>
+        <itunes:owner>
+			<itunes:name>dawa</itunes:name>
+			<itunes:email></itunes:email>
+		</itunes:owner>
+        <itunes:image href="/assets/images/icon-lg.png" />
+		<itunes:category text="Technology" />
+		<itunes:category text="Society &amp; Culture" />
+        <itunes:category text="Education">
+            <itunes:category text="Educational Technology" />
+        </itunes:category> 
+        <itunes:explicit>no</itunes:explicit>
+		
+
+ 
+        <item>
+            <title>སྐད་ཡིག་ཐོབ་ཐང་།</title>
+            <itunes:author>dawa</itunes:author>
+            <itunes:subtitle>Karkhung: སྐད་ཡིག་ཐོབ་ཐང་།</itunes:subtitle>
+            <itunes:summary>ང་ནི་མེ་ལོང་གི་གཙོ་སྒྲིག་པ་ཡིན། བདག་གིས་མེ་ལོང་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱི་མདུན་དུ་ཡིད་འགུག་ཅིང་སེམས་ཤུགས་འཕེལ་བ། བློ་སྐྱེད་ཐོབ་པ་བཅས་ཀྱི་ཁྱད་ཆོས་འཛོམས་པའི་བརྙན་ཐུང་ཁག་ཅིག་འཇོག་གི་ཡིན། བརྙན་ཐུང་འདི་དག་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱིས་སོ་སོའི་ཉིན་རེའི་འཚོ་བའི་ནང་རང་གི་འཇིག་རྟེན་ལ་རན་པའི་ལྟ་ཚུལ་གསར་བ་དང་བློ་གྲོས་གསར་བ། ཐབས་ལམ་གསར་བ་སོགས་རྙེད་ཐུབ་པའི་རེ་བ་ཆེ། མེ་ལོང་གཙོ་སྒྲིག་པ་སྒང་དཀོན་མཆོག་ནས།</itunes:summary>
+            <itunes:image href="/assets/images/images.jpg" />
+            <enclosure url="https://karkhung.s3.amazonaws.com/audio/episode1.mpeg" length="17:6" type="audio/mp3"/>
+            <guid isPermaLink="true">/2016/episode-1.html</guid>
+            <pubDate>Mon, 07 Nov 2016 15:00:00 +0530</pubDate>
+            <itunes:duration>51:35</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <description>ང་ནི་མེ་ལོང་གི་གཙོ་སྒྲིག་པ་ཡིན། བདག་གིས་མེ་ལོང་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱི་མདུན་དུ་ཡིད་འགུག་ཅིང་སེམས་ཤུགས་འཕེལ་བ། བློ་སྐྱེད་ཐོབ་པ་བཅས་ཀྱི་ཁྱད་ཆོས་འཛོམས་པའི་བརྙན་ཐུང་ཁག་ཅིག་འཇོག་གི་ཡིན། བརྙན་ཐུང་འདི་དག་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱིས་སོ་སོའི་ཉིན་རེའི་འཚོ་བའི་ནང་རང་གི་འཇིག་རྟེན་ལ་རན་པའི་ལྟ་ཚུལ་གསར་བ་དང་བློ་གྲོས་གསར་བ། ཐབས་ལམ་གསར་བ་སོགས་རྙེད་ཐུབ་པའི་རེ་བ་ཆེ། མེ་ལོང་གཙོ་སྒྲིག་པ་སྒང་དཀོན་མཆོག་ནས། ང་ནི་མེ་ལོང་གི་གཙོ་སྒྲིག་པ་ཡིན། བདག་གིས་མེ་ལོང་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱི་མདུན་དུ་ཡིད་འགུག་ཅིང་སེམས་ཤུགས་འཕེལ་བ། བློ་སྐྱེད་ཐོབ་པ་བཅས་ཀྱི་ཁྱད་ཆོས་འཛོམས་པའི་བརྙན་ཐུང་ཁག་ཅིག་འཇོག་གི་ཡིན། བརྙན་ཐུང་འདི་དག་བརྒྱུད་ནས་བོད་མི་རྣམས་ཀྱིས་སོ་སོའི་ཉིན་རེའི་འཚོ་བའི་ནང་རང་གི་འཇིག་རྟེན་ལ་རན་པའི་ལྟ་ཚུལ་གསར་བ་དང་བློ་གྲོས་གསར་བ། ཐབས་ལམ་གསར་བ་སོགས་རྙེད་ཐུབ་པའི་རེ་བ་ཆེ། མེ་ལོང་གཙོ་སྒྲིག་པ་སྒང་དཀོན་མཆོག་ནས། Show Notes Available at http://localhost:4000/2016/episode-1.html.</description>
+            <itunes:keywords></itunes:keywords>
+            <itunes:block>no</itunes:block>
+		</item>
+    
+
+	</channel>
+</rss>

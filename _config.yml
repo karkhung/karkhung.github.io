@@ -1,16 +1,20 @@
 
 
 # Site settings
-title: karkhung
-web-url: karkhung.cn
+title: Karkhung
+web-url: 
 description: "Placeholder for site description"
-email: karkhung21@gmail.com
-author: karkhung
+author: dawa
 lang: bo
 copyright: "&#xA9; 2020"
 
+#RSS
+googleplayownnder: dolmakyab@gmail.com
+googleplayownauthor: dolmakyab
+itunesname: dolmakyab
+itunesemail: dolmakyab@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-github_username:  karkhung
+github_username: 
 
 permalink: /:year/:title.html
 paginate: 5

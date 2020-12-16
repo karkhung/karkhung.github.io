@@ -7,8 +7,8 @@
     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>{{ site.title }}</title>
-    <googleplay:owner>dawapaljor@tibetaction.net</googleplay:owner>
-    <googleplay:author>dawa</googleplay:author>
+    <googleplay:owner>{{site.googleplayownnder}}</googleplay:owner>
+    <googleplay:author>{{site.googleplayownauthor}}</googleplay:author>
     <itunes:owner>
       <itunes:name>dawa</itunes:name>
       <itunes:email>dawapaljor@tibetaction.net</itunes:email>
@@ -18,7 +18,7 @@
     <description>{{ site.description | xml_escape }}</description>
     <googleplay:image href="{{ site.web-url }}/assets/images/icon-lg.png"/>
     <language>en-us</language>
-    <link>https://dranyen.s3.amazonaws.com</link>
+    <link>https://karkhung.s3.amazonaws.com/</link>
   {% for post in site.posts %}
    {% if post.layout == 'podcast' %}
     <item>

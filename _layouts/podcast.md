@@ -5,18 +5,17 @@ layout: podcast
 {% include header.html %}
 <div class="container">
 	<div class="section-title">
-		<h1>{{page.title}}</h1>
 	</div>
 	<section class="half-width">
 		<article>
-			<div class="playbox" style="background-image:url({{site.baseurl}}/assets/images/{{page.cover}})">
+			<div class="playbox">
 				<div class="playbox-container">
 					<h1>{{page.title}} &nbsp;&nbsp; 
 						<a class="playbox-dl" style="color:white" href="{{page.file}}" download> 
 							<i class="fas fa-cloud-download-alt"></i>
 						</a>
 					</h1>
-					<p><i class="fa fa-clock"></i>  {{page.duration}}</p>
+					<p><i class="fa fa-clock"></i>  {{page.length}}</p>
 					<p><i class="fa fa-calendar"></i> {{ site.time | date: "%A, %B %e, %Y" }}</p>
 					<audio id="player" controls>
 				  		<source src="{{page.file}}" type="audio/mp3" />
