@@ -1,26 +1,26 @@
-I"�
-<h1 id="སྐརཁུངལེཚནསྐབསདངཔོ">སྐར་ཁུང་ལེ་ཚན་སྐབས་དང་པོ།</h1>
+I"�	<h1 id="སྐརཁུངལེཚནསྐབསདངཔོ">སྐར་ཁུང་ལེ་ཚན་སྐབས་དང་པོ།</h1>
 
 <p>དེང་སྐབས་ལག་ལེན་ལ་བསྟར་བཞིན་པའི་སློབ་གསོའི་ཐབས་ལམ་དང་པོ་ནས་གཉིས་བར་བསྒྱུར་བའི་སྲིད་ཇུས་དེས་བོད་སྐད་ཡིག་གི་ཉམས་ཆག་ལ་ཐེབས་པའི་ཤུགས་རྐྱེན་སྐོར་ནས་གླེང་མོལ་བྱས་ཡོད།</p>
 
 <script>
 (function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdy29x2G_2BdGlF3xI1QuAwAVHWKDZ_2FKtkbyo3k1A9hULLN.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
 
-<!-- start sw-rss-feed code -->
+<p><br />
+<!-- start sw-rss-feed code --> 
 <script type="text/javascript"> 
 <!-- 
 rssfeed_url = new Array(); 
 rssfeed_url[0]="http://melhong.com/category/language/feed/";  
 rssfeed_frame_width="400"; 
-rssfeed_frame_height="260"; 
+rssfeed_frame_height="280"; 
 rssfeed_scroll="on"; 
 rssfeed_scroll_step="6"; 
 rssfeed_scroll_bar="off"; 
 rssfeed_target="_blank"; 
-rssfeed_font_size="12"; 
-rssfeed_font_face=""; 
-rssfeed_border="on"; 
-rssfeed_css_url="https://feed.surfing-waves.com/css/style6.css"; 
+rssfeed_font_size="16"; 
+rssfeed_font_face="https://github.com/karkhung/karkhung.github.io/blob/master/assets/fonts/Qomolangma-Title.ttf"; 
+rssfeed_border="off"; 
+rssfeed_css_url=""; 
 rssfeed_title="on"; 
 rssfeed_title_name=""; 
 rssfeed_title_bgcolor="#3366ff"; 
@@ -36,7 +36,7 @@ rssfeed_item_title_color="#666";
 rssfeed_item_bgcolor="#fff"; 
 rssfeed_item_bgimage=""; 
 rssfeed_item_border_bottom="on"; 
-rssfeed_item_source_icon="off"; 
+rssfeed_item_source_icon="on"; 
 rssfeed_item_date="off"; 
 rssfeed_item_description="on"; 
 rssfeed_item_description_length="120"; 
@@ -46,11 +46,10 @@ rssfeed_item_description_tag="off";
 rssfeed_no_items="0"; 
 rssfeed_cache = "5f2474a0a23e6c4ac3e20d68c1a61517"; 
 //--> 
-</script>
-
-<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
-
-<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
-<div style="color:#ccc;font-size:10px; text-align:right; width:400px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div>
-<!-- end sw-rss-feed code -->
+</script> 
+<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+<!-- 
+<a href="https://surfing-waves.com" rel="noopener" target="_blank">Surfing Waves</a></div> 
+ end sw-rss-feed code 
+ --></p>
 :ET

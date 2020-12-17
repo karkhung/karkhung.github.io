@@ -12,7 +12,7 @@
   src: url(../fonts/Qomolangma-UchenSuring.ttf);
 }
 body{
-	background-color: #cf9050;
+	background-color: #e6e6e6;
 	margin:0px;
 	padding:0px;
 	font-family: qomo-title;
@@ -56,7 +56,7 @@ header,footer,.container{
 }
 .social a:hover i{color:#403e3e;}
 header{
-	background-color: #681712;
+	background-color: #e6e6e6;
 	color:  black;
 	background-image: url(/assets/icons/top.png);
 	background-size: 140px;
@@ -92,7 +92,7 @@ vertical-align: middle;
 font-size: 20px;
 }
 .nav-menu a{
-	color:#f3d519;
+	color:#681712;
 	padding:5px;
 
 }
@@ -270,7 +270,6 @@ grid-template-columns: 1fr 1fr 1fr;
 .plyr--audio{
 	padding:10px ;
 }
-iframe{width:100%;}
 
 
 /*-------------------- Responsive for mobile devices ----------------*/
@@ -364,4 +363,5 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	article{
 		margin:0px;
 	}
+	iframe{width: 350px}
 }
