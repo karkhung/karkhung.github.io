@@ -3,13 +3,13 @@
   "name": "Karkhung",
   "icons": [
     {
-      "src": "/assets/images/logo-min.png",
+      "src": "/assets/icon/icon-sm.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/assets/images/logo-min.png.png",
+      "src": "/assets/icon/icon-md.png",
       "type": "image/png",
       "sizes": "512x512"
     }

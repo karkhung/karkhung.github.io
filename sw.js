@@ -9,7 +9,9 @@ var files =[
   'assets/css/style.css',
   'assets/fontawesome/css/fontawesome.min.css',
   'assets/fontawesome/css/all.css',
-  'https://cdn.plyr.io/3.6.2/plyr.css',
+  'assets/fonts/Qomolangma-Title.ttf',
+  'assets/fonts/Qomolangma-UchenSuring.ttf',
+  //'https://cdn.plyr.io/3.6.2/plyr.css',
   'assets/icons/background.jpg'
 
 ]
