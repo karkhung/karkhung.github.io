@@ -1,2 +1,3 @@
 # line to add git ignore
 _site/
+.jekkyll-cache
