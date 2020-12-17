@@ -7,6 +7,10 @@
   font-family: qomo-title;
   src: url(../fonts/Qomolangma-Title.ttf);
 }
+@font-face {
+  font-family: qomo-suring;
+  src: url(../fonts/Qomolangma-UchenSuring.ttf);
+}
 body{
 	background-color: #cf9050;
 	margin:0px;
@@ -21,6 +25,10 @@ body{
 h1,h2,h3,h4,h5,h6{
 	margin:0px;
 	padding: 0px;
+	color:#681712;
+}
+p,a{
+	font-family: qomo-suring;
 }
 header,footer,.container{
 	width:100vw;
@@ -102,7 +110,6 @@ article h1{
 	text-align: left;
 	border-bottom: 3px solid #ff7100;
     padding: 15px 11px;
-    color:#404040;;
 }
 article p{
 	margin:0px 5px;
@@ -129,12 +136,19 @@ article p{
 
 .podcast-list p{
 	overflow: hidden;
+	font-size: 20px;
 }
 .podcast-list a{
 	color:#f3d519 ;
 }
 .podcast-list-meta span{
-	display: block;
+	    font-size: 14px;
+    color: white;
+}
+.podcast-list-meta  p span{
+    padding: 0px 8px;
+    color: white;
+
 	
 }
 .paginate{
@@ -157,7 +171,7 @@ font-size: 20px
 	grid-template-columns: 1fr 1fr;
 }
 
-.full-width .podcast-list-meta span{
+.podcast-list-meta span .fa{
 	font-size: 12px;
 }
 
@@ -231,7 +245,7 @@ footer span{
 }
 footer .f-widget{
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
 }
 .widget{
 	padding:50px 26px;
