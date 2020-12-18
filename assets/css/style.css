@@ -270,7 +270,27 @@ grid-template-columns: 1fr 1fr 1fr;
 .plyr--audio{
 	padding:10px ;
 }
+.add-button{
+	color:white;
+    margin-top: 10px;
+    padding: 5px 25px;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,1)), color-stop(50%, rgba(241,111,92,1)), color-stop(51%, rgba(246,41,12,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: -o-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 20px;
+    border: 3px solid white;
+    box-shadow: 1px 1px 3px grey;
+    border-right: 0px;
+    position: fixed;
+    top:0px;
+    right:0px;
+    z-index: 2;
+}
 
 /*-------------------- Responsive for mobile devices ----------------*/
 
@@ -282,6 +302,7 @@ grid-template-columns: 1fr 1fr 1fr;
 		grid-template-columns:1fr;
 	}
 	nav{
+		display: block;
 margin-top:0px;
 background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92%);  
 	}

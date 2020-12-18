@@ -41,6 +41,7 @@
 {% endif %}
 
 	<title>{{site.title}}</title>
+  <script src="a2h.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/style.css">
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
 	<link rel="stylesheet" href="{{site.baseurl}}/assets/fontawesome/css/fontawesome.min.css" type="text/css">
@@ -58,21 +59,27 @@
 <header>
 	<nav>
 		<div class="nav-title">
-      <a href="#"><img src="{{site.baseurl}}/assets/icons/logo-min.png" width="150px"></a>  
+      <a href="#"><img src="{{site.baseurl}}/assets/icons/logo-min.png" width="150px">
+      </a>
+
+      <span class="add-button">
+         <i class="fa fa-plus-square"></i>
+         add to home
+       </span>  
     </div>
 		<div class="nav-menu">
-			<a href="{{site.baseurl}}../index.html">སྒྲ་མཛོད། <i class="fa fa-podcast" aria-hidden="true"></i></a>
-			<a href="{{site.baseurl}}../page/about">སྐར་ཁུང་གི་སྐོར་།  <i class="fa fa-female" aria-hidden="true"></i></a>
+			<a href="{{site.baseurl}}/index.html">སྒྲ་མཛོད། <i class="fa fa-podcast" aria-hidden="true"></i></a>
+			<a href="{{site.baseurl}}/page/about">སྐར་ཁུང་གི་སྐོར་།  <i class="fa fa-female" aria-hidden="true"></i></a>
 		</div>
 	</nav>
     <nav class="nav-mobile">
-      <a href="{{site.baseurl}}../index.html/#">
+      <a href="{{site.baseurl}}/index.html#">
         <i class="fa fa-home" aria-hidden="true"></i>
       </a>
-      <a href="{{site.baseurl}}../index.html">
+      <a href="{{site.baseurl}}/index.html">
         <i class="fa fa-podcast" aria-hidden="true"></i>
       </a>
-      <a href="{{site.baseurl}}../page/about">
+      <a href="{{site.baseurl}}/page/about">
         <i class="fa fa-female" aria-hidden="true"></i>
       </a>
   </nav>
