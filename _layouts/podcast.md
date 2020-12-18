@@ -10,7 +10,7 @@ layout: podcast
 		<article>
 			<div class="playbox">
 				<div class="playbox-container">
-					<h1>{{page.title}} &nbsp;&nbsp; 
+					<h1><span>སྒྲ་མཛོད།  {{page.episode}} :</span> {{page.title}} &nbsp;&nbsp; 
 						<a class="playbox-dl" style="color:white" href="{{page.file}}" download> 
 							<i class="fas fa-cloud-download-alt"></i>
 						</a>

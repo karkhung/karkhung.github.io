@@ -15,8 +15,8 @@
     }
   ],
   "start_url": "/index.html?source=pwa",
-  "background_color": "#1d1d1d",
+  "background_color": "#2b458f",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#bfbd09"
+  "theme_color": "#2b458f"
 }
