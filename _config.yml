@@ -4,9 +4,12 @@
 title: Karkhung
 web-url: 
 description: "Placeholder for site description"
-author: dawa
+author: dolma
 lang: bo
 copyright: "&#xA9; 2020"
+
+#google tracking code
+gtag: 'G-HMK4JHPST9'
 
 #RSS
 googleplayownnder: dolmakyab@gmail.com
