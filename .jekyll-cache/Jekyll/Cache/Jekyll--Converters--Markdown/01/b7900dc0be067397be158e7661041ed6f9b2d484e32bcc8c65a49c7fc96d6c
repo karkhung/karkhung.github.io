@@ -1,14 +1,15 @@
-I"�	<h1 id="སྐརཁུངལེཚནསྐབསདངཔོ">སྐར་ཁུང་ལེ་ཚན་སྐབས་དང་པོ།</h1>
+I"	<h1 id="སྐརཁུངལེཚནསྐབསདངཔོ">སྐར་ཁུང་ལེ་ཚན་སྐབས་དང་པོ།</h1>
 
 <p>དེང་སྐབས་ལག་ལེན་ལ་བསྟར་བཞིན་པའི་སློབ་གསོའི་ཐབས་ལམ་དང་པོ་ནས་གཉིས་བར་བསྒྱུར་བའི་སྲིད་ཇུས་དེས་བོད་སྐད་ཡིག་གི་ཉམས་ཆག་ལ་ཐེབས་པའི་ཤུགས་རྐྱེན་སྐོར་ནས་གླེང་མོལ་བྱས་ཡོད།</p>
 
 <script>
 (function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src="https://widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgdy29x2G_2BdGlF3xI1QuAwAVHWKDZ_2FKtkbyo3k1A9hULLN.js",a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script>
 
-<p><br />
-<!-- start sw-rss-feed code --> 
+<p><br /></p>
+<div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;"><div class="taggbox-socialwall" data-wall-id="44464" view-url="https://app.taggbox.com/widget/e/44464">  </div><script src="https://widget.taggbox.com/embed.min.js" type="text/javascript"></script></div>
+<!-- start sw-rss-feed code 
 <script type="text/javascript"> 
-<!-- 
+
 rssfeed_url = new Array(); 
 rssfeed_url[0]="http://melhong.com/category/language/feed/";  
 rssfeed_frame_width="400"; 
@@ -45,11 +46,12 @@ rssfeed_item_description_link_color="#333";
 rssfeed_item_description_tag="off"; 
 rssfeed_no_items="0"; 
 rssfeed_cache = "5f2474a0a23e6c4ac3e20d68c1a61517"; 
-//--> 
+//
 </script> 
 <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+-->
 <!-- 
 <a href="https://surfing-waves.com" rel="noopener" target="_blank">Surfing Waves</a></div> 
  end sw-rss-feed code 
- --></p>
+ -->
 :ET
