@@ -9,7 +9,8 @@ lang: bo
 copyright: "&#xA9; 2020"
 
 #google tracking code
-gtag: 'G-HMK4JHPST9'
+# gtag: 'G-HMK4JHPST9' --- Old
+gtag: 'G-FCE1DY3Q01 '
 
 #RSS
 googleplayownnder: dolmakyab@gmail.com
