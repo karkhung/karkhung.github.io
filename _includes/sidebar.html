@@ -1,4 +1,18 @@
 <aside>
-	
-	
+	<h2><i class="fa fa-podcast"></i><span>   སྒྲ་མཛོད།</span>  </h2>
+	<ul>
+	{% for post in site.posts %}
+	 {% if post.layout =='podcast' %}
+	 <li><i class="fas fa-microphone-alt"></i> <a href="{{ post.url }}"><span>{{post.episode }} </span>: {{post.title}}</a></li>
+	 {% endif %}
+	 {% endfor %}
+	</ul>
+	<h2><i class="fa fa-newspaper"></i><span>   ཟིན་བྲིས།</span></h2>
+	<ul>
+	{% for post in site.posts %}
+	 {% if post.layout =='blog' %}
+	 <li><i class="fas fa-book-reader"></i><a href="{{ post.url }}">{{post.title}}</a></li>
+	 {% endif %}
+	 {% endfor %}
+	</ul>
 </aside>	

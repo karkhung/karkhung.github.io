@@ -3,7 +3,7 @@
 <head>
 <meta content="{{ site.title }}" property="og:site_name">
 {% if page.title %}
-  <meta content="{{ page.episode }}" property="og:title">
+  <meta content="{{ page.title }}" property="og:title">
 {% else %}
   <meta content="{{ site.title }}" property="og:title">
 {% endif %}
@@ -96,7 +96,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        </span>  
     </div>
 		<div class="nav-menu">
-			<a href="{{site.baseurl}}/index.html">སྒྲ་མཛོད། <i class="fa fa-podcast" aria-hidden="true"></i></a>
+			<a href="{{site.baseurl}}/index.html"><span>སྒྲ་མཛོད། </span><i class="fa fa-podcast" aria-hidden="true"></i></a>
+      <a href="{{site.baseurl}}/blog.html">ཟིན་བྲིས། <i class="fas fa-newspaper"></i></a>
 			<a href="{{site.baseurl}}/page/about">སྐར་ཁུང་གི་སྐོར་།  <i class="fa fa-female" aria-hidden="true"></i></a>
 		</div>
 	</nav>
@@ -106,6 +107,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <a href="{{site.baseurl}}/index.html">
         <i class="fa fa-podcast" aria-hidden="true"></i>
+      </a>
+       <a href="{{site.baseurl}}/blog.html">
+        <i class="fa fa-newspaper" aria-hidden="true"></i>
       </a>
       <a href="{{site.baseurl}}/page/about">
         <i class="fa fa-female" aria-hidden="true"></i>

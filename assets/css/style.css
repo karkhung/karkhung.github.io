@@ -2,6 +2,7 @@
 #c85b03 lightbrown
 #f3d519 yellow;
 #681712 brown
+#2b448e blue
 */
 @font-face {
   font-family: qomo-title;
@@ -16,16 +17,13 @@ body{
 	margin:0px;
 	padding:0px;
 	font-family: qomo-title;
-	color: #807e7e;
 	text-decoration: none;
-	line-height: 23px;
 	transition: .2s;
-	font-family: 
 }
 h1,h2,h3,h4,h5,h6{
 	margin:0px;
 	padding: 0px;
-	color:#681712;
+	
 }
 p,a{
 	font-family: qomo-suring;
@@ -71,9 +69,10 @@ header{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
 nav{
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 3fr 400px;
 	margin-top:50px;
 }
 .nav-mobile{
@@ -83,8 +82,8 @@ nav{
 display: inline;
 vertical-align: middle;
 }
-.nav-title img{
-	
+.nav-menu span, nav-menu .fa{
+	vertical-align: middle;
 }
 .nav-menu{
 	text-align: right;
@@ -92,8 +91,8 @@ vertical-align: middle;
 font-size: 20px;
 }
 .nav-menu a{
-	color:#681712;
-	padding:5px;
+	color:#2b448e;
+	padding:5px 10px;
 
 }
 
@@ -102,14 +101,10 @@ article{
 	margin:10px;
 	border-radius: 10px
 }
+article h1{font-size: 20px}
 a{
 color:#6f4f21;
 text-decoration: none;	
-}
-article h1{
-	text-align: left;
-	border-bottom: 3px solid #ff7100;
-    padding: 15px 11px;
 }
 article p{
 	margin:0px 5px;
@@ -117,6 +112,11 @@ article p{
 	line-height: 25px;
 	word-wrap: break-word;
 	color:#404040;
+}
+article .page-title{
+	font-size: 30px;
+	margin:10px;
+	color:#2b448e;
 }
 .podcast-list{
 	display: grid;
@@ -214,11 +214,7 @@ font-size: 20px
 	width:100%;
 	box-shadow: 0 0 6px black;
 }
-.half-width .social a .fab,.half-width .social a .fas{
-		font-size: 15px;
-		text-shadow: 0px 0px 3px black;
-   		 margin: 10px;
-	}
+
 .social center{
 		width:100%;
 		
@@ -258,6 +254,46 @@ grid-template-columns: 1fr 1fr 1fr;
 	padding:5px;
 	font-size: 20px
 }
+.blog{padding: 30px; width:300px;}
+.blog img{width:100%;}
+.blog span{color:#2a448e;}
+/*-------------------- Aside ----------------*/
+aside{
+padding:20px 40px;
+}
+
+aside .fa,aside span{vertical-align:middle;}
+aside h2{ font-size: 20px
+background:brown;
+color:#681112;
+ }
+aside ul span{}
+aside ul{
+	margin:0px;
+	padding: 0px;
+	list-style-type: none;
+}
+aside ul li,aside h2{
+	padding: 10px;
+	border-bottom: .5px solid white;
+	background: lightgray;
+}
+aside h2{background:#2b448e;
+	color:white;
+	font-weight: 100;
+}
+aside ul li a{font-size: 20px;
+font-family:qomo-title;
+color:#2b448e;
+
+}
+aside ul i{
+	font-size: 20px;
+	color:#2b448e;
+	padding:10px;
+}
+/* aside ul li a{border-left: 8px solid #681112;
+    padding-left: 10px;} */
 /*-------------------- Player controls ----------------*/
 .plyr--audio .plyr__controls{
 	border:0px;
@@ -298,7 +334,7 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
 	body{
 		width:100vw;
 	}
-	.full-width, .dashboard{
+	.full-width, .half-width, .dashboard{
 		grid-template-columns:1fr;
 	}
 	nav{
@@ -328,7 +364,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		margin:0px;
 		padding:0px;
 	}
-	aside{display: none}
+	aside{}
 	.half-width article{
 		width:91vw;
 		padding: 10px;
@@ -362,7 +398,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		display:block;
 		background:#681712;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		position:fixed;
 		margin-bottom: 0px;
 		bottom: 0px;

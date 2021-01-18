@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+{% include header.html %}
+<div class="container">
+	<div class="section-title">
+		<!--
+		<h1>སྒྲ་མཛོད།<i class="fa fa-podcast"></i></h1>
+		
+		<div class="social">
+			{% include share-bar.html %}
+		</div>
+	-->
+	</div>
+	<section class="full-width post">
+		{% for post in site.posts %}
+			{% if post.layout == 'blog' %}
+				<article class="blog">
+					<a href="{{ post.url }}">
+					<div class="podcast-list-meta">
+						<img src="/assets/images/{{post.cover}}">
+							<h2> {{ post.title }}</h2>
+						<p>
+							 {{post.description}}
+						</p>
+						<span>
+							<i class="fa fa-flag"></i>  {{post.category}}
+						</span>
+					</div>
+					</a>
+				</article>
+			{% else %}
+			<article class="blog">
+					<div class="podcast-list-meta">
+							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>
+						
+						
+					</div>
+					
+				</article>
+			{% endif %}
+		{% endfor %}
+	</section>
+
+
+	<div class="section-title">
+	
+		<p style="color:white" class="paginate">
+			<span>{% if paginator.total_pages > 1 %}
+				  {% if paginator.previous_page %}
+				    <a href="{{ paginator.previous_page_path }}"><i class="fa fa-chevron-left"></i></a>
+				  {% else %}
+				  {% endif %}
+				{% endif %}</span>
+			<span class="paginate-current-page">{{ paginator.page }} / </span>
+			<span class="paginate-total-page">{{ paginator.total_pages }}</span>
+			<span><a href="{{ paginator.next_page_path }}"><i class="fa fa-chevron-right"></i></a></span>
+		</p>
+	</div>
+	
+	<section class="full-width series">
+		
+	</section>
+	
+	-->
+</div>
+
+{% include footer.html %}
