@@ -5,7 +5,6 @@ var appVersion = 'cache.v1';
 
 var files =[
   './',
-  'index.html',
   'assets/css/style.css',
   'assets/fontawesome/css/fontawesome.min.css',
   'assets/fontawesome/css/all.css',
@@ -13,7 +12,6 @@ var files =[
   'assets/fonts/Qomolangma-UchenSuring.ttf',
   //'https://cdn.plyr.io/3.6.2/plyr.css',
   'assets/icons/background.jpg'
-
 ]
 
 // install
