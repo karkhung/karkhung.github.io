@@ -3,6 +3,37 @@ layout: podcast
 ---
 
 {% include header.html %}
+<script type="">
+	/*--- ref --https://codesource.io/getting-started-with-the-media-session-api/ */
+	if ('mediaSession' in navigator) {
+		navigator.mediaSession.metadata = new MediaMetadata({
+		  title: '{{page.title}}',
+		  episode: '{{page.episode}}',
+		  artwork: [
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '96x96',   type: 'image/png' },
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '128x128', type: 'image/png' },
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '192x192', type: 'image/png' },
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '256x256', type: 'image/png' },
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '384x384', type: 'image/png' },
+		    { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '512x512', type: 'image/png' },
+		  ]
+		});	
+}
+ navigator.mediaSession.setActionHandler("play", function() { 
+		 		audio.play();
+		 });
+navigator.mediaSession.setActionHandler("pause", function() { 
+		 		audio.pause();
+		  });
+
+/*player.addEventListener('click', function(e) {
+
+alert("player clicked")
+
+});
+*/
+
+</script>
 <div class="container">
 	<div class="section-title">
 	</div>

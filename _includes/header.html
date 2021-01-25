@@ -55,8 +55,8 @@
   <meta name="msapplication-navbutton-color" content="#5f5eaa">
   <meta name="apple-mobile-web-app-status-bar-style" content="#5f5eaa">
   <link type="application/rss+xml" rel="alternate" title="Title_Value" href="{{site.baseurl}}../podcast-google.xml"/>
-  <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl | prepend: site.url }}"></script>
- <script type="text/javascript" src="{{ "/assets/js/media-session.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+  <script type="text/javascript" src="{{site.baseurl}}/assets/js/main.js"></script>
+  <script type="text/javascript" src="{{site.baseurl}}sw.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69420725-21"></script>
 <script>
@@ -80,6 +80,19 @@
 </script>
 </head>
 <body>
+<script>
+  // Only trigger if service workers are supported in browser.
+if ('serviceWorker' in navigator) {
+  // Wait until window is loaded before registering.
+  window.addEventListener('load', () => {
+    // Register the service worker with "/" as it's scope.
+    navigator.serviceWorker.register('{{site.baseurl}}/sw.js', { scope: '/' })
+      // Output success/failure of registration.
+      .then(() => console.log('SW registered...!!'))
+      .catch(() => console.error('SW registration failed'));
+  });
+}
+</script>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV4TF6W"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
