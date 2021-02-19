@@ -9,7 +9,7 @@ layout: post
 				<p class="meta">
 					<span>
 						<i class="fa fa-calendar">
-				</i>  {{ site.time | date_to_string  }} / <i class="fa fa-flag"></i>{{page.category}} | {% include share-bar.html %}
+				</i>  {{ page.time | date_to_string  }} / <i class="fa fa-flag"></i>{{page.category}} | {% include share-bar.html %}
 					</span>
 				</p>
 				{{content}}

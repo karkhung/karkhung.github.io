@@ -23,7 +23,7 @@ layout: default
 						<p><a href="{{ post.url }}"> {{ post.title }}</a></p>
 						<span>
 							<i class="fa fa-clock"></i> {{post.length}} Minutes  |  
-							<i class="fa fa-calendar"></i> {{ site.time | date_to_string  }} 
+							<i class="fa fa-calendar"></i> {{ post.time | date_to_string  }} 
 						</span>
 						<span>
 							<i class="fa fa-flag"></i>  {{post.category}}
