@@ -10,8 +10,8 @@
     <googleplay:owner>{{site.googleplayownnder}}</googleplay:owner>
     <googleplay:author>{{site.googleplayownauthor}}</googleplay:author>
     <itunes:owner>
-      <itunes:name>dawa</itunes:name>
-      <itunes:email>dawapaljor@tibetaction.net</itunes:email>
+      <itunes:name>dolma</itunes:name>
+      <itunes:email>dolma@gmail.com</itunes:email>
   </itunes:owner>
   <itunes:image href="{{ site.web-url }}/assets/images/icon-lg.png" />
     <itunes:category text="Technology" />
