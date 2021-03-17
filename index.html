@@ -17,7 +17,7 @@ layout: default
 		{% for post in site.posts %}
 			{% if post.layout == 'podcast' %}
 				<article class="podcast-list">
-					<img src="/assets/images/{{post.cover}}">
+					<img src="/assets/images/{{post.cover}}" alt="{{post.cover}}">
 					<div class="podcast-list-meta">
 						<p><span>སྒྲ་མཛོད། {{post.episode}}: </span></p>
 						<p><a href="{{ post.url }}"> {{ post.title }}</a></p>
