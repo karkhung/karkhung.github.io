@@ -444,11 +444,12 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
  }
  .head-qr p{
 
- 	text-align: center;
- 	margin: 0px;
  }
- .head-qr a{
-  	color:white;	
+ .head-qr input{
+  	color:white;
+  	background:none;
+  	border:0px solid white;	
+  	text-align: center;
  }
 /*----------- Iphone 6/7/8 Plus  ----- */
 @media only screen and (max-width: 414px) {
@@ -462,6 +463,9 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
 	.head-qr{
     right: 10px;
     top: 10px;
+	}
+	.nav-title img{
+		margin-top:20px;
 	}
 }
 /*----------- Iphone 6/7/8----- */
@@ -479,6 +483,9 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
   	position: fixed;
 
 	}
+	.nav-title img{
+		margin-top:20px;
+	}
 }
 
 
@@ -492,5 +499,8 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
 	}
 	.widget a{font-size: 16px;
 		color:orange;
+	}
+	.nav-title img{
+		margin-top:20px;
 	}
 }

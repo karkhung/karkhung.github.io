@@ -97,21 +97,6 @@ if ('serviceWorker' in navigator) {
       .catch(() => console.error('SW registration failed'));
   });
 }
-
-function copy2Clipboard() {
-  /* Get the text field */
-  var copyText ="https://u.wechat.com/IMRHZYIciaXMnoknffqO0CQ" ;
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
 </script>
 
 <header>
@@ -121,8 +106,8 @@ function copy2Clipboard() {
       </a>
       <div class="head-qr">
         <img src="{{site.baseurl}}/assets/icons/qr.jpg" alt="qr-code" width="100px;">
-        <br>
-        <p><button onclick="copy2Clipboard();">Copy ID</button></p>
+     
+        <center><input type="button"  onclick="window.location.href='https://u.wechat.com/IMRHZYIciaXMnoknffqO0CQ'"  value="Open ID"></center>
       </div>
       <span class="add-button">
          <i class="fa fa-plus-square"></i>
