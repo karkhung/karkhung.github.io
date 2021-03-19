@@ -329,6 +329,12 @@ background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 
     z-index: 2;
 }
 
+.head-qr{
+	position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 /*-------------------- Responsive for mobile devices ----------------*/
 
 @media only screen and (max-width: 600px) {
@@ -426,6 +432,16 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		color:orange;
 	}
 }
+.head-qr{
+	position: fixed;
+    right: 20px;
+    top: 80px;
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    border: 5px solid #eb331e;
+    z-index: 1;
+    box-shadow: 1px 1px 5px black;
 /*----------- Iphone 6/7/8 Plus  ----- */
 @media only screen and (max-width: 414px) {
 	body{
@@ -433,6 +449,11 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	}
 	.widget{
 		padding: 50px 10px;
+	}
+	
+	.head-qr{
+    right: 10px;
+    top: 10px;
 	}
 }
 /*----------- Iphone 6/7/8----- */
@@ -445,6 +466,10 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	}
 	.widget a{font-size: 16px;
 		color:orange;
+	}
+	.head-qr{
+  	position: relative;
+
 	}
 }
 
