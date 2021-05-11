@@ -390,7 +390,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		background:#000000d1;
 		display: none;
 	}
-	.playbox-container{height: 124px;}
+	.playbox-container{height: auto;}
 	.playbox-container p{display: inline;}
 	.nav-menu{display: none}
 	.nav-mobile{
