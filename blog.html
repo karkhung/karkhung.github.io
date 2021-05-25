@@ -19,7 +19,7 @@ layout: default
 				<article class="blog">
 					<a href="{{ post.url }}">
 					<div class="podcast-list-meta">
-						<img src="/assets/images/{{post.cover}}">
+						<img src="{{ site.baseurl }}/assets/images/{{post.img}}">
 							<h2> {{ post.title }}</h2>
 						<p>
 							 {{post.description}}
@@ -31,6 +31,7 @@ layout: default
 					</a>
 				</article>
 			{% else %}
+			<!--
 			<article class="blog">
 					<div class="podcast-list-meta">
 							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>
@@ -39,6 +40,8 @@ layout: default
 					</div>
 					
 				</article>
+			-->
+
 			{% endif %}
 		{% endfor %}
 	</section>
