@@ -57,7 +57,7 @@ header{
 	background-color: #e6e6e6;
 	color:  black;
 	background-image: url(/assets/icons/top.png);
-	background-size: 140px;
+	background-size: 80px;
 	background-repeat: repeat-x;
 }
 .full-width,nav,.f-widget{
