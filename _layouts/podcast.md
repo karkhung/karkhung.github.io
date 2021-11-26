@@ -43,13 +43,15 @@ alert("player clicked")
 			<div class="playbox">
 				<div class="playbox-container">
 					<h1>
-						<span>སྒྲ་མཛོད།  {{page.episode}} :</span> {{page.title}} &nbsp;&nbsp; 
+						<span>ལས་རིམ་  {{page.episode}} :</span> {{page.title}} &nbsp;&nbsp; 
+					</h1>
+					<p>
+						<i class="fa fa-calendar"></i> {{ page.time | date: "%A, %B %e, %Y" }} |
+						<i class="fa fa-clock"></i>  {{page.length}}| 
 						<a class="playbox-dl" style="color:white" href="{{page.file}}" download> 
 							<i class="fas fa-cloud-download-alt"></i>
 						</a>
-					</h1>
-					<p><i class="fa fa-clock"></i>  {{page.length}}</p>
-					<p><i class="fa fa-calendar"></i> {{ page.time | date: "%A, %B %e, %Y" }}</p>
+					</p>
 					<audio id="player" controls>
 				  		<source src="{{page.file}}" type="audio/mp3" />
 				  		Your browser does not support the audio element.
@@ -64,6 +66,7 @@ alert("player clicked")
 			{% include pagination.html %}
 		</article>
 		<!-- {% include sidebar.html %} -->
+{% include sidebar.html %}
 	</section>
 </div>
 

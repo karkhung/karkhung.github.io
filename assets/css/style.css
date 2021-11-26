@@ -12,6 +12,7 @@
   font-family: qomo-suring;
   src: url(../fonts/Qomolangma-UchenSuring.ttf);
 }
+*{font-weight: 100;}
 body{
 	background-color: #e6e6e6;
 	margin:0px;
@@ -146,6 +147,9 @@ article .page-title{
     color: white;
 
 }
+.podcast-list-meta  p {
+	padding:0px;
+}
 .podcast-list-meta  p span{
     padding: 0px 8px;
     color: white;
@@ -210,6 +214,7 @@ font-size: 20px
 	padding: 2px 10px;
 	margin:0px;
 	text-shadow: 0px 0px 3px black;
+	font-weight: 100;
 }
 .img-md{
 	width:100%;
@@ -255,8 +260,18 @@ grid-template-columns: 1fr 1fr 1fr;
 	padding:5px;
 	font-size: 20px
 }
-.blog{padding: 30px; width:300px;}
+.blog{padding: 20px; 
+	width:300px;
+	border:2px solid #c2bfbf;
+	background:#2b448e;
+
+}
 .blog img{width:100%;}
+.blog h2{
+	font-size: 20px;
+    font-weight: 100px;
+    color:white;
+}
 .blog span{color:#2a448e;}
 /*-------------------- Aside ----------------*/
 aside{
@@ -275,15 +290,18 @@ aside ul{
 	list-style-type: none;
 }
 aside ul li,aside h2{
-	padding: 10px;
-	border-bottom: .5px solid white;
+	padding: 3px;
+	/*
+	 border-bottom: .5px solid white;
 	background: lightgray;
+	*/
 }
 aside h2{background:#2b448e;
 	color:white;
 	font-weight: 100;
+	font-size: 20px
 }
-aside ul li a{font-size: 20px;
+aside ul li a{font-size: 11px;
 font-family:qomo-title;
 color:#2b448e;
 
@@ -306,6 +324,7 @@ aside ul i{
 }
 .plyr--audio{
 	padding:10px ;
+	margin-top:20px;
 }
 .add-button{
 	color:white;
