@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 ---
 {% include header.html %}
 <div class="container">

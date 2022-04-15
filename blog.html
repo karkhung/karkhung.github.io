@@ -4,29 +4,23 @@ layout: default
 
 {% include header.html %}
 <div class="container">
-	<div class="section-title">
-		<!--
-		<h1>སྒྲ་མཛོད།<i class="fa fa-podcast"></i></h1>
-		
-		<div class="social">
-			{% include share-bar.html %}
-		</div>
-	-->
+	<div class="section-title">	
+		<i class="sectiom-title-thumbnail fa fa-newspaper"></i>
+		<h2>ཟིན་བྲིས།</h2>
 	</div>
-	<section class="full-width post">
+	<section class="grid-blog post">
 		{% for post in site.posts %}
 			{% if post.layout == 'blog' %}
 				<article class="blog">
 					<a href="{{ post.url }}">
 					<div class="podcast-list-meta">
+						{% if post.img %}
 						<img src="{{ site.baseurl }}/assets/images/{{post.img}}">
+						{% endif %}
 							<h2> {{ post.title }}</h2>
-						<p>
-							 {{post.description}}
+						<p class="excerpt">
+							 {{post.excerpt}}
 						</p>
-						<span>
-							<i class="fa fa-flag"></i>  {{post.category}}
-						</span>
 					</div>
 					</a>
 				</article>
@@ -34,9 +28,7 @@ layout: default
 			<!--
 			<article class="blog">
 					<div class="podcast-list-meta">
-							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>
-						
-						
+							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>						
 					</div>
 					
 				</article>
@@ -45,25 +37,34 @@ layout: default
 			{% endif %}
 		{% endfor %}
 	</section>
+<div class="section-title">
+	<i class="sectiom-title-thumbnail fa fa-volume-up"></i>
+		<h2>སྐད་འཕྲིན་གླེང་མོལ།</h2>
+</div>
 
+<section class="grid-blog-audio">
+		{% for post in site.posts %}
+			{% if post.layout == 'audio-blog' %}
+				<article class="">
+					<a href="{{ post.url }}" class="audio-blog-link">
+					<div class="podcast-list-meta">
+							<h2> {{ post.title }}</h2>
+							<p>{{ post.excerpt}}</p>
+					</div>		
+					</a>
+				</article>
+			{% else %}
+			<!--
+			<article class="blog">
+					<div class="podcast-list-meta">
+							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>						
+					</div>
+					
+				</article>
+			-->
 
-	<div class="section-title">
-	
-		<p style="color:white" class="paginate">
-			<span>{% if paginator.total_pages > 1 %}
-				  {% if paginator.previous_page %}
-				    <a href="{{ paginator.previous_page_path }}"><i class="fa fa-chevron-left"></i></a>
-				  {% else %}
-				  {% endif %}
-				{% endif %}</span>
-			<span class="paginate-current-page">{{ paginator.page }} / </span>
-			<span class="paginate-total-page">{{ paginator.total_pages }}</span>
-			<span><a href="{{ paginator.next_page_path }}"><i class="fa fa-chevron-right"></i></a></span>
-		</p>
-	</div>
-	
-	<section class="full-width series">
-		
+			{% endif %}
+		{% endfor %}
 	</section>
 	
 </div>

@@ -39,20 +39,15 @@ header,footer,.container{
 	min-height: 100vh;
 }
 .section-title{
+	color:#2c468f;
 	width:1200px;
-	margin:20px auto;
+	margin:5px auto;
 	display: grid;
-	grid-template-columns: 1000px 200px;
+	grid-template-columns: 60px auto;
+	background: linear-gradient(0deg, #d7d7d7, transparent);
 }
-.section-title h1{
-	padding:20px;
-	color:#1f1f1f;
-}
-.section-title i{
-	color:#1f1f1f;
-	font-size: 25px;
-	padding:5px;
-}
+
+
 .social a:hover i{color:#403e3e;}
 header{
 	background-color: #e6e6e6;
@@ -61,14 +56,29 @@ header{
 	background-size: 80px;
 	background-repeat: repeat-x;
 }
-.full-width,nav,.f-widget{
+.full-width,
+nav,
+.f-widget,
+.grid-blog,
+.grid-podcast,
+.grid-blog-audio
+{
 	width:1200px;
 	margin:0px auto;
 }
 
-.full-width,.dashboard{
+.grid-blog,
+.dashboard{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 300px);
+}
+.grid-podcast{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid-blog-audio{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 nav{
@@ -96,7 +106,18 @@ font-size: 20px;
 	padding:5px 10px;
 
 }
+.audio-blog-link h2,.blog h2{
+	font-size: 20px;
+}
 
+.audio-blog-player{
+	grid-template-columns:1fr;
+}
+.audio-blog-player h1{
+	font-size: 25px;
+	color:#f3d519;
+}
+.section-title .fa{font-size: 40px}
 article{
 	padding:15px;
 	margin:10px;
@@ -145,8 +166,8 @@ article .page-title{
 .podcast-list-meta span{
 	    font-size: 14px;
     color: white;
-
 }
+
 .podcast-list-meta  p {
 	padding:0px;
 }
@@ -216,6 +237,7 @@ font-size: 20px
 	text-shadow: 0px 0px 3px black;
 	font-weight: 100;
 }
+
 .img-md{
 	width:100%;
 	box-shadow: 0 0 6px black;
@@ -260,18 +282,11 @@ grid-template-columns: 1fr 1fr 1fr;
 	padding:5px;
 	font-size: 20px
 }
-.blog{padding: 20px; 
-	width:300px;
-	border:2px solid #c2bfbf;
-	background:#2b448e;
+.blog{
 
 }
 .blog img{width:100%;}
-.blog h2{
-	font-size: 20px;
-    font-weight: 100px;
-    color:white;
-}
+
 .blog span{color:#2a448e;}
 /*-------------------- Aside ----------------*/
 aside{
@@ -353,8 +368,17 @@ aside ul i{
 	body{
 		width:100vw;
 	}
+	.full-width, nav, .f-widget, .grid-blog, .grid-podcast, .grid-blog-audio{
+		width:auto;
+	}
 	.full-width, .half-width, .dashboard{
 		grid-template-columns:1fr;
+	}
+	.grid-blog, .dashboard,.grid-blog-audio{
+		grid-template-columns: repeat(2, 48vw);
+	}
+	.grid-blog-audio{
+		grid-template-columns: 1fr;
 	}
 	nav{
 		display: block;
@@ -366,7 +390,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		width: 100vw;
 	}
 	.section-title h1{
-		display: none
+		display: block
 	}
 	.paginate,.social{
 		width:80vw;
@@ -442,6 +466,9 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	iframe{width: 350px}
 	.widget a{font-size: 16px;
 		color:orange;
+	}
+	.blog h2{
+		font-size: 15px
 	}
 }
 .head-qr{
