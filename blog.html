@@ -6,11 +6,51 @@ layout: default
 <div class="container">
 	<div class="section-title">	
 		<i class="sectiom-title-thumbnail fa fa-newspaper"></i>
-		<h2>ཟིན་བྲིས།</h2>
+		<h2>ཟིན་བྲིས། / སྐད་འཕྲིན་གླེང་མོལ།</h2>
 	</div>
 	<section class="grid-blog post">
 		{% for post in site.posts %}
-			{% if post.layout == 'blog' %}
+			{% if post.layout == "blog" %}
+				{% if post.category=="ཟིན་བྲིས།" %}
+					<article class="blog">
+					 <p class="blog-grid-meta">
+					 	<span class="fa fa-newspaper"></span>
+					 	<span class="blog-grid-meta-title">ཟིན་བྲིས།</span>
+					 </p>
+					<a href="{{ post.url }}">
+					<div class="podcast-list-meta">
+						
+							<h2> {{ post.title }}</h2>
+
+						<p class="excerpt">
+							 {{post.excerpt}}
+						</p>
+					</div>
+					</a>
+				</article>
+				{% else if post.category== "སྐད་འཕྲིན་གླེང་མོལ།" %}
+					<article class="blog">
+					<p class="blog-grid-meta">
+						<span class="fa fa-volume-up"></span>
+						<span class="blog-grid-meta-title">སྐད་འཕྲིན་གླེང་མོལ།</span>
+					</p>
+					<a href="{{ post.url }}">
+					<div class="podcast-list-meta">
+							<h2> {{ post.title }}</h2>
+					</div>
+					</a>
+				</article>
+				{% endif %}
+			{% endif %}
+
+		{% endfor %}
+	</section>
+</div>
+
+{% include footer.html %}
+
+			<!--
+
 				<article class="blog">
 					<a href="{{ post.url }}">
 					<div class="podcast-list-meta">
@@ -24,7 +64,8 @@ layout: default
 					</div>
 					</a>
 				</article>
-			{% else %}
+			-->
+			
 			<!--
 			<article class="blog">
 					<div class="podcast-list-meta">
@@ -33,40 +74,3 @@ layout: default
 					
 				</article>
 			-->
-
-			{% endif %}
-		{% endfor %}
-	</section>
-<div class="section-title">
-	<i class="sectiom-title-thumbnail fa fa-volume-up"></i>
-		<h2>སྐད་འཕྲིན་གླེང་མོལ།</h2>
-</div>
-
-<section class="grid-blog-audio">
-		{% for post in site.posts %}
-			{% if post.layout == 'audio-blog' %}
-				<article class="">
-					<a href="{{ post.url }}" class="audio-blog-link">
-					<div class="podcast-list-meta">
-							<h2> {{ post.title }}</h2>
-							<p>{{ post.excerpt}}</p>
-					</div>		
-					</a>
-				</article>
-			{% else %}
-			<!--
-			<article class="blog">
-					<div class="podcast-list-meta">
-							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>						
-					</div>
-					
-				</article>
-			-->
-
-			{% endif %}
-		{% endfor %}
-	</section>
-	
-</div>
-
-{% include footer.html %}

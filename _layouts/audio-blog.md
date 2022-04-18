@@ -11,7 +11,7 @@ layout: audio-blog
 						 {{page.title}}
 					</h1>
 					<audio id="player" controls>
-				  		<source src="{{page.file}}" type="audio/mp3" />
+				  		<source src="{{page.audio}}" type="audio/mp3" />
 				  		Your browser does not support the audio element.
 					</audio>
 				</div>

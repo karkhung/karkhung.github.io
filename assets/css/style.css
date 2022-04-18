@@ -44,7 +44,6 @@ header,footer,.container{
 	margin:5px auto;
 	display: grid;
 	grid-template-columns: 60px auto;
-	background: linear-gradient(0deg, #d7d7d7, transparent);
 }
 
 
@@ -71,6 +70,7 @@ nav,
 .dashboard{
 	display: grid;
 	grid-template-columns: repeat(4, 300px);
+	grid-auto-rows: min-content;
 }
 .grid-podcast{
 	display: grid;
@@ -283,11 +283,14 @@ grid-template-columns: 1fr 1fr 1fr;
 	font-size: 20px
 }
 .blog{
-
+box-shadow: 0px 1px 6px 1px #d5d3d3;
 }
 .blog img{width:100%;}
-
+.blog-grid-meta{ border-bottom: 1px solid orange }
 .blog span{color:#2a448e;}
+.blog .fa{ font-size: 20px }
+.blog-grid-meta-title{font-size: 13px;padding-left:5px}
+.blog-grid-meta-title,.blog .fa{vertical-align: top;}
 /*-------------------- Aside ----------------*/
 aside{
 padding:20px 40px;
@@ -375,7 +378,7 @@ aside ul i{
 		grid-template-columns:1fr;
 	}
 	.grid-blog, .dashboard,.grid-blog-audio{
-		grid-template-columns: repeat(2, 48vw);
+		grid-template-columns: repeat(1, 100vw);
 	}
 	.grid-blog-audio{
 		grid-template-columns: 1fr;
