@@ -373,6 +373,7 @@ aside ul i{
 	}
 	.full-width, nav, .f-widget, .grid-blog, .grid-podcast, .grid-blog-audio{
 		width:auto;
+		grid-template-columns: 1fr;
 	}
 	.full-width, .half-width, .dashboard{
 		grid-template-columns:1fr;
