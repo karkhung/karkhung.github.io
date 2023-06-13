@@ -43,7 +43,7 @@
 
 	<title>{{site.title}} || {{page.episode}}</title>
   <link rel="icon" href="{{site.baseurl}}/assets/icons/icon-sm.png" type="image/x-icon" sizes="16x16">
-  <script src="{{site.baseurl}}/a2h.js" defer></script>
+
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/style.css">
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" /> 
 	<link rel="stylesheet" href="{{site.baseurl}}/assets/fontawesome/css/fontawesome.min.css" type="text/css">
@@ -56,7 +56,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#5f5eaa">
   <link type="application/rss+xml" rel="alternate" title="Title_Value" href="{{site.baseurl}}../podcast-google.xml"/>
   <script type="text/javascript" src="{{site.baseurl}}/assets/js/main.js"></script>
-  <script type="text/javascript" src="{{site.baseurl}}sw.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69420725-21"></script>
 <script>
@@ -85,25 +84,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<script>
-  // Only trigger if service workers are supported in browser.
-if ('serviceWorker' in navigator) {
-  // Wait until window is loaded before registering.
-  window.addEventListener('load', () => {
-    // Register the service worker with "/" as it's scope.
-    navigator.serviceWorker.register('{{site.baseurl}}/sw.js', { scope: '/' })
-      // Output success/failure of registration.
-      .then(() => console.log('SW registered...!!'))
-      .catch(() => console.error('SW registration failed'));
-  });
-}
-</script>
 
 <header>
 	<nav>
 		<div class="nav-title">
       <a href="{{site.baseurl}}/index.html"><img src="{{site.baseurl}}/assets/icons/logo-min.png" width="150px">
       </a>
+    <!-- Disabled pwa link shortcut
       <div class="head-qr">
         <img src="{{site.baseurl}}/assets/icons/qr.jpg" alt="qr-code" width="100px;">
         <center></center>
@@ -113,6 +100,8 @@ if ('serviceWorker' in navigator) {
          add to home
        </span>  
     </div>
+
+-->
 		<div class="nav-menu">
 			<a href="{{site.baseurl}}/index.html"><span>སྒྲ་མཛོད། </span><i class="fa fa-podcast" aria-hidden="true"></i></a>
       <a href="{{site.baseurl}}/blog.html">ཟིན་བྲིས། <i class="fas fa-newspaper"></i></a>
