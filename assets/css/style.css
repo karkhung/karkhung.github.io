@@ -14,7 +14,7 @@
 }
 *{font-weight: 100;}
 body{
-	background-color: #e6e6e6;
+	background-color: #2a438d;
 	margin:0px;
 	padding:0px;
 	font-family: qomo-title;
@@ -24,7 +24,7 @@ body{
 h1,h2,h3,h4,h5,h6{
 	margin:0px;
 	padding: 0px;
-	
+	color:#c2bfbf;
 }
 p,a{
 	font-family: qomo-suring;
@@ -37,6 +37,7 @@ header,footer,.container{
 .container{
 	height: auto;
 	min-height: 100vh;
+	background-color:#2a438d;
 }
 .section-title{
 	color:#2c468f;
@@ -49,10 +50,10 @@ header,footer,.container{
 
 .social a:hover i{color:#403e3e;}
 header{
-	background-color: #e6e6e6;
+	background-color: #2a438d;
 	color:  black;
 	background-image: url(/assets/icons/top.png);
-	background-size: 80px;
+	background-size: 123px;
 	background-repeat: repeat-x;
 }
 .full-width,
@@ -102,9 +103,11 @@ vertical-align: middle;
 font-size: 20px;
 }
 .nav-menu a{
-	color:#2b448e;
+	color:#e3dfdf;
 	padding:5px 10px;
-
+}
+.nav-menu a:hover{
+	color:#c2bfbf;
 }
 .audio-blog-link h2,.blog h2{
 	font-size: 20px;
@@ -133,7 +136,7 @@ article p{
 	padding:10px 0px;
 	line-height: 25px;
 	word-wrap: break-word;
-	color:#404040;
+	color:#c2bfbf;
 }
 article .page-title{
 	font-size: 30px;
@@ -143,12 +146,10 @@ article .page-title{
 .podcast-list{
 	display: grid;
 	grid-template-columns: 0fr 3fr;
-	padding: 10px;
     grid-gap: 10px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0px 1px 3px gray;
-    background:#3c2218;
+    background:#88a3f58a;
 }
 
 .podcast-list img{
@@ -255,7 +256,7 @@ font-size: 20px
     border-radius:5px;
 }
 footer{margin-top:50px;
-	background:#681112;
+	background:#0c1a42;
 	height:200px;
 background-image: url(/assets/icons/background.jpg);
     background-size: 25px;
@@ -283,7 +284,8 @@ grid-template-columns: 1fr 1fr 1fr;
 	font-size: 20px
 }
 .blog{
-box-shadow: 0px 1px 6px 1px #d5d3d3;
+
+background:#88a3f58a;
 }
 .blog img{width:100%;}
 .blog-grid-meta{ border-bottom: 1px solid orange }
@@ -319,9 +321,10 @@ aside h2{background:#2b448e;
 	font-weight: 100;
 	font-size: 20px
 }
-aside ul li a{font-size: 11px;
-font-family:qomo-title;
-color:#2b448e;
+aside ul li a{
+	font-size: 16px;
+	font-family:qomo-title;
+	color:#c2bfbf;
 
 }
 aside ul i{
@@ -443,7 +446,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	.nav-mobile{
 		width:100vw;
 		display:block;
-		background:#681712;
+		background:#5d77c6;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		position:fixed;
@@ -458,14 +461,14 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	.nav-mobile .fa{
 		font-size: 25px;
 		padding: 15px;
-		color: #f3d519 ;
+		color: #2a438e ;
 
 	}
 	header{
 		background:none;
 	}
 	article{
-		margin:0px;
+		margin:13px;
 	}
 	iframe{width: 350px}
 	.widget a{font-size: 16px;
@@ -473,6 +476,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 	}
 	.blog h2{
 		font-size: 15px
+
 	}
 }
 .head-qr{
