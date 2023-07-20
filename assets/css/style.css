@@ -3,6 +3,7 @@
 #f3d519 yellow;
 #681712 brown
 #2b448e blue
+
 */
 @font-face {
   font-family: qomo-title;
@@ -468,7 +469,7 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		background:none;
 	}
 	article{
-		margin:13px;
+		margin:13git stpx;
 	}
 	iframe{width: 350px}
 	.widget a{font-size: 16px;
