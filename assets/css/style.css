@@ -15,7 +15,7 @@
 }
 *{font-weight: 100;}
 body{
-	background-color: #2a438d;
+	background-color: #0f1730;
 	margin:0px;
 	padding:0px;
 	font-family: qomo-title;
@@ -38,7 +38,10 @@ header,footer,.container{
 .container{
 	height: auto;
 	min-height: 100vh;
-	background-color:#2a438d;
+	background-color:#0f1730;
+	background-image: url(/assets/icons/stars.png);
+	background-size: 800px;
+	background-attachment: fixed;
 }
 .section-title{
 	color:#2c468f;
@@ -51,7 +54,7 @@ header,footer,.container{
 
 .social a:hover i{color:#403e3e;}
 header{
-	background-color: #2a438d;
+	background-color: #0f1730;
 	color:  black;
 	background-image: url(/assets/icons/top.png);
 	background-size: 123px;
@@ -465,9 +468,8 @@ background: linear-gradient(180deg, rgba(44,70,144,1) 0%, rgba(247,247,247,0) 92
 		color: #2a438e ;
 
 	}
-	header{
-		background:none;
-	}
+
+
 	article{
 		margin:13git stpx;
 	}
