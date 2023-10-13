@@ -33,10 +33,9 @@ incremental: true
 markdown: kramdown
 
 #Exclude local build settings
-exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
+# exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
 
 plugins: 
-  - jekyll-admin
   - jekyll-paginate
 
 
