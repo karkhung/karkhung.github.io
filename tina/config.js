@@ -24,6 +24,17 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "_posts",
+         ui: {
+        filename: {
+          slugify: values => {
+            const postDate = values.time ? new Date(values.time) : new Date();
+            return `${postDate.toISOString().split("T")[0]}-${"episode"}-${(values.episode || "")
+              .toLowerCase()
+              .replace(/ /g, "-")}`.replace(/[^\w\.\/-\s]/gi, "");
+          }
+        }
+      },
+
         fields: [
           {
             type: "string",
@@ -42,6 +53,12 @@ export default defineConfig({
             name: "file",
             label: "Audio URL",
           },
+          {
+            label: "Date",
+            name: "time",
+            type: "datetime",
+          },
+
            {
             type: "image",
             name: "cover",
