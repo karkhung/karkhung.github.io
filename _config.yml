@@ -21,13 +21,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username: 
 
 permalink: /:year/:title.html
-paginate: 5
-paginate_path: "blog/:num"
 
-#Timezone
-timezone: 
-regenerate: true
-incremental: true
+
+
 
 # Build settings
 markdown: kramdown
@@ -35,7 +31,7 @@ markdown: kramdown
 #Exclude local build settings
 # exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
 
-plugins: 
-  - jekyll-paginate
-
+theme: minima
+plugins:
+  - jekyll-feed
 
