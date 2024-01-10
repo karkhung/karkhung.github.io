@@ -43,6 +43,12 @@ export default defineConfig({
             isTitle: true,
             required: true,
           },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+          },
           { 
             type: "string",
             name: "episode",
