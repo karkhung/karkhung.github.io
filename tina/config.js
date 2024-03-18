@@ -12,11 +12,12 @@ export default defineConfig({
     outputFolder: "admin",
     publicFolder: "./",
   },
+
   media: {
-    tina: {
+  tina: {
       mediaRoot: "assets/images",
       publicFolder: "./",
-    },
+   },
   },
   schema: {
     collections: [
