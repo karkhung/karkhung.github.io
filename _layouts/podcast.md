@@ -58,7 +58,7 @@ alert("player clicked")
 					</audio>
 				</div>
 				<div class="social">
-					<img class="img-md" src="{{site.baseurl}}/assets/images/{{page.cover}}">
+					<img class="img-md" src="{{site.baseurl}}{{page.cover}}">
 					<center>{% include share-bar.html %}</center>
 				</div>
 			</div>
