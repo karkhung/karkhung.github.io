@@ -14,10 +14,10 @@ export default defineConfig({
   },
 
   media: {
-  tina: {
-      mediaRoot: "/assets/images/",
-      publicFolder: "./",
-   },
+    tina: {
+        publicFolder: "./",
+        mediaRoot: "/assets/images/",
+     },
   },
   schema: {
     collections: [
