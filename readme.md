@@ -17,5 +17,9 @@ Root directory:
 
 Build System Version: Version 2
     Go:1.21.0 / Node.js :18.17.1/Bun:11.33/Python: 3.11.5
+
+## Runtime
+Compatibility Date: Nov 8, 2023
 ```
+
 
