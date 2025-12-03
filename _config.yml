@@ -45,10 +45,63 @@ defaults:
 # Build settings
 markdown: kramdown
 
-#Exclude local build settings
-# exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
+# GitHub Pages settings
+theme: jekyll-theme-minimal
 
-theme: minima
+# GitHub Pages plugins (whitelisted)
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jekyll-remote-theme
+  - jekyll-avatar  # This is now allowed in GitHub Pages
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - vendor
+  - .gitignore
+  - .github
+  - .vscode
+  - .DS_Store
+  - .jekyll-cache
+  - .sass-cache
+  - .bundle
+  - tina
+  - admin
+  - .tina
+  - .tina/__generated__
+  - .tina/__generated__/**/*
+  - .tina/__generated__/**/**/*
+
+# Enable incremental build for faster development
+# incremental: true
+
+# Set timezone (change to your timezone if needed)
+timezone: Asia/Thimphu
+
+# Set the base URL for production
+description: >- # this means to ignore newlines until "baseurl:"
+  Karkhung's personal website and audiobook collection
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://karkhung.github.io" # the base hostname & protocol for your site
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "audiobooks"
+    values:
+      layout: "audiobook"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
 
