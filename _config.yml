@@ -55,7 +55,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-github-metadata
   - jekyll-remote-theme
-  - jekyll-avatar  # This is now allowed in GitHub Pages
 
 # Exclude files from processing
 exclude:
