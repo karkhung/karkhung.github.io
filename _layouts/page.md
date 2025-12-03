@@ -14,4 +14,5 @@ layout: page
 	</section>
 </div>
 
+{% include mobile-nav.html %}
 {% include footer.html %}

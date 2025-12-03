@@ -25,5 +25,5 @@ layout: audio-blog
 	</section>
 
 </div>
-
+{% include mobile-nav.html %}
 {% include footer.html %}

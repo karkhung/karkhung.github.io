@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% include header.html %}
+
+
+<div class="container">
+  <section class="audiobook-container">
+    <div class="audiobook-banner">
+      <img src="{{ page.cover }}" alt="{{ page.series_title }} Cover">
+    <div class="series-description">
+       <h1>{{ page.series_title }}</h1>
+      {{ content }}
+    </div>
+    </div>
+
+    <div class="audiobook-card" style="width: 100%;">
+      {% assign chapters = site.audiobooks | where: "series_slug", page.series_slug | sort: "chapter" %}
+         {% for chapter in chapters %}
+      <article class="chapter-item">
+        <div class="chapter-meta">
+          <h3>Chapter {{ chapter.chapter }}: {{ chapter.title }}</h3>
+          <p class="chapter-meta-sub">Duration: {{ chapter.duration }} <a href="{{ chapter.url }}">Read More</a></p>
+        </div>
+
+        
+        <div class="audio-inline-player">
+          <audio class="chapter-audio" controls preload="none">
+            <source src="{{ chapter.audio_file }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </article>
+    {% endfor %}
+    </div>
+  </section>
+    
+  
+</div>
+
+
+<!-- custom audio player script for series page -->
+<script src="/assets/js/custom-audio-player.js" defer></script>
+
+{% include mobile-nav.html %}
+
+{% include footer.html %}

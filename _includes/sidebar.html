@@ -1,17 +1,48 @@
+<style>
+  .podcast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .podcast-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .podcast-grid li {
+    padding: 5px 0;
+  }
+  .podcast-grid a {
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+  .podcast-grid i {
+    margin-right: 5px;
+    flex-shrink: 0;
+  }
+</style>
 <aside>
-	<h2><i class="fa fa-podcast"></i><span>   སྒྲ་མཛོད།</span>  </h2>
-	<ul>
-	{% for post in site.posts %}
-	 {% if post.layout =='podcast' %}
-	 <li><i class="fas fa-microphone-alt"></i> <a href="{{ post.url }}"><span>{{post.episode }} </span>: {{post.title}}</a></li>
-	 {% endif %}
-	 {% endfor %}
-	</ul>
+  <h2><i class="fa fa-podcast"></i><span>   སྒྲ་མཛོད།</span>  </h2>
+  <ul class="podcast-grid">
+  {% for post in site.posts %}
+   {% if post.layout =='podcast' %}
+   <li><a href="{{ post.url }}"><i class="fas fa-microphone-alt"></i><span>{{post.episode}}:</span>{{post.title}}</a></li>
+   {% endif %}
+  {% endfor %}
+  </ul>
 	<h2><i class="fa fa-newspaper"></i><span>   ཟིན་བྲིས།</span></h2>
 	<ul>
 	{% for post in site.posts %}
 	 {% if post.layout =='blog' %}
-	 <li><i class="fas fa-book-reader"></i><a href="{{ post.url }}">{{post.title}}</a></li>
+	 	<li><i class="fas fa-book-reader"></i><a href="{{ post.url }}">{{post.title}}</a></li>
 	 {% endif %}
 	 {% endfor %}
 	</ul>

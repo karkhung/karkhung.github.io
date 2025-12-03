@@ -1,0 +1,17 @@
+---
+layout: audiobook
+title: Audiobook Library
+---
+
+
+<!-- <h1>Audiobook Library</h1> -->
+
+{% assign series_list = site.audiobooks | group_by: "series_slug" %}
+
+{% for series in series_list %}
+  <div class="series-card">
+    <h2>{{ series.items.first.series }}</h2>
+    <p>{{ series.items.size }} chapters</p>
+    <a href="/audiobooks/{{ series.name }}/">View Series</a>
+  </div>
+{% endfor %}

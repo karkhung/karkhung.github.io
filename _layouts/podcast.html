@@ -1,0 +1,144 @@
+---
+layout: podcast
+---
+
+{% include header.html %}
+<script type="">
+
+/*--- ref --https://codesource.io/getting-started-with-the-media-session-api/ */
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: '{{page.title}}',
+      episode: '{{page.episode}}',
+      artwork: [
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '96x96',   type: 'image/png' },
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '128x128', type: 'image/png' },
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '192x192', type: 'image/png' },
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '256x256', type: 'image/png' },
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '384x384', type: 'image/png' },
+        { src: '{{site.baseurl}}/assets/images/{{page.cover}}', sizes: '512x512', type: 'image/png' },
+      ]
+    }); 
+}
+ navigator.mediaSession.setActionHandler("play", function() { 
+        audio.play();
+     });
+navigator.mediaSession.setActionHandler("pause", function() { 
+        audio.pause();
+      });
+
+/*player.addEventListener('click', function(e) {
+
+alert("player clicked")
+
+});
+*/
+
+</script>
+<div class="container">
+	<div class="section-title">
+	</div>
+	<section class="half-width">
+		<article>
+			<div class="playbox">
+				<div class="">
+					<h1>
+						<span>ལས་རིམ་  {{page.episode}} :</span> {{page.title}} &nbsp;&nbsp; 
+					</h1>
+					<p>
+						<i class="fa fa-calendar"></i> {{ page.time | date: "%A, %B %e, %Y" }} |
+						<i class="fa fa-clock"></i>  {{page.length}}| 
+						<a class="playbox-dl" style="color:white" href="{{page.file}}" download> 
+							<i class="fas fa-cloud-download-alt"></i>
+						</a>
+					</p>
+					<article class="chapter-item">
+						<div class="audio-inline-player">
+							<audio class="chapter-audio" preload="none">
+								<source src="{{ page.file }}" type="audio/mpeg">
+								<source src="{{ page.file | replace: '.mp3', '.ogg' }}" type="audio/ogg">
+								<source src="{{ page.file | replace: '.mp3', '.wav' }}" type="audio/wav">
+								Your browser does not support the audio element.
+							</audio>
+							<div class="audio-error" style="color: red; display: none;"></div>
+						</div>
+
+
+				</div>
+				<div class="social">
+					<img class="img-md" src="{{site.baseurl}}{{page.cover}}">
+					<center>{% include share-bar.html %}</center>
+				</div>
+			</div>
+			{{content}}
+			{% include pagination.html %}
+		</article>
+		<!-- {% include sidebar.html %} -->
+{% include sidebar.html %}
+	</section>
+</div>
+
+
+<!-- custom audio player script for podcast page -->
+<script>
+  // Debug: Check if script loads
+  console.log('Custom audio player script will load now...');
+  
+  function initCustomPlayer() {
+    console.log('Initializing custom audio player...');
+    const audioElements = document.querySelectorAll('.chapter-audio');
+    console.log('Found audio elements:', audioElements.length);
+    
+    audioElements.forEach((audio, index) => {
+      console.log(`Audio ${index + 1} src:`, audio.querySelector('source')?.src);
+      
+      // Re-initialize the audio element for the custom player
+      audio.controls = false;
+      
+      // Check if the custom player script has created controls
+      setTimeout(() => {
+        const customPlayer = audio.closest('.audio-inline-player').querySelector('.custom-player');
+        if (!customPlayer) {
+          console.warn('Custom player not initialized, falling back to native controls');
+          audio.controls = true;
+        }
+      }, 1000);
+    });
+  }
+  
+  // Initialize when DOM is loaded and script is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCustomPlayer);
+  } else {
+    initCustomPlayer();
+  }
+</script>
+
+<!-- Load the custom player script -->
+<script>
+  function loadScript() {
+    const script = document.createElement('script');
+    script.src = '{{ site.baseurl }}/assets/js/custom-audio-player.js';
+    script.onload = function() {
+      console.log('Custom audio player script loaded successfully');
+      // Re-initialize after script loads
+      if (typeof initCustomPlayer === 'function') {
+        initCustomPlayer();
+      }
+    };
+    script.onerror = function() {
+      console.error('Failed to load custom audio player script');
+      // Fallback to native controls if script fails to load
+      document.querySelectorAll('.chapter-audio').forEach(audio => {
+        audio.controls = true;
+      });
+    };
+    document.head.appendChild(script);
+  }
+  
+  // Load the script
+  loadScript();
+</script>
+
+{% include mobile-nav.html %}
+{% include footer.html %}

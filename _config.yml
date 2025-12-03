@@ -1,5 +1,5 @@
 
-
+encoding: utf-8
 # Site settings
 title: Karkhung
 web-url: 
@@ -19,8 +19,25 @@ itunesname: dolmakyab
 itunesemail: dolmakyab@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username: 
-
 permalink: /:year/:title.html
+
+
+# Collections
+collections:
+  audiobooks:
+    output: true
+    permalink: /audiobooks/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "audiobooks"
+    values:
+      layout: "audiobook"
+# End of Collections
+
+
+
 
 
 
