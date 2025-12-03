@@ -78,7 +78,14 @@ exclude:
   - .tina/__generated__
   - .tina/__generated__/**/*
   - .tina/__generated__/**/**/*
-
+  
+# Add this line to explicitly disable jekyll-avatar
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jekyll-remote-theme
 # Enable incremental build for faster development
 # incremental: true
 
