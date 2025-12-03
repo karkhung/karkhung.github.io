@@ -4,73 +4,34 @@ layout: default
 
 {% include header.html %}
 <div class="container">
-	<div class="section-title">	
-		<i class="sectiom-title-thumbnail fa fa-newspaper"></i>
-		<h2>ཟིན་བྲིས། / སྐད་འཕྲིན་གླེང་མོལ།</h2>
-	</div>
-	<section class="grid-blog post">
-		{% for post in site.posts %}
-			{% if post.layout == "blog" %}
-				{% if post.category=="ཟིན་བྲིས།" %}
-					<article class="blog">
-					 <p class="blog-grid-meta">
-					 	<span class="fa fa-newspaper"></span>
-					 	<span class="blog-grid-meta-title">ཟིན་བྲིས།</span>
-					 </p>
-					<a href="{{ post.url }}">
-					<div class="podcast-list-meta">
-						
-							<h2> {{ post.title }}</h2>
-
-						<p class="excerpt">
-							 {{post.excerpt}}
-						</p>
-					</div>
-					</a>
-				</article>
-				{% else if post.category== "སྐད་འཕྲིན་གླེང་མོལ།" %}
-					<article class="blog">
-					<p class="blog-grid-meta">
-						<span class="fa fa-volume-up"></span>
-						<span class="blog-grid-meta-title">སྐད་འཕྲིན་གླེང་མོལ།</span>
-					</p>
-					<a href="{{ post.url }}">
-					<div class="podcast-list-meta">
-							<h2> {{ post.title }}</h2>
-					</div>
-					</a>
-				</article>
-				{% endif %}
-			{% endif %}
-
-		{% endfor %}
-	</section>
+    <div class="section-title">	
+        <i class="sectiom-title-thumbnail fa fa-newspaper"></i>
+        <h2>ཟིན་བྲིས། / སྐད་འཕྲིན་གླེང་མོལ།</h2>
+    </div>
+    
+    <section class="grid-podcast">
+        {% for post in site.posts %}
+            {% if post.layout == "blog" %}
+                <article class="blog-list">
+                    <div class="podcast-list-meta">
+                        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                        {% if post.excerpt %}
+                            <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                        {% endif %}
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+        
+        {% assign blog_posts = site.posts | where: "layout", "blog" %}
+        {% if blog_posts.size == 0 %}
+            <article class="podcast-list no-posts">
+                <div class="podcast-list-meta">
+                    <h2><i class="far fa-frown-open"></i> .. No posts available</h2>
+                </div>
+            </article>
+        {% endif %}
+    </section>
 </div>
 
 {% include footer.html %}
-
-			<!--
-
-				<article class="blog">
-					<a href="{{ post.url }}">
-					<div class="podcast-list-meta">
-						{% if post.img %}
-						<img src="{{ site.baseurl }}/assets/images/{{post.img}}">
-						{% endif %}
-							<h2> {{ post.title }}</h2>
-						<p class="excerpt">
-							 {{post.excerpt}}
-						</p>
-					</div>
-					</a>
-				</article>
-			-->
-			
-			<!--
-			<article class="blog">
-					<div class="podcast-list-meta">
-							<h2> <i class="far fa-frown-open"></i> .. No posts available </h2>						
-					</div>
-					
-				</article>
-			-->

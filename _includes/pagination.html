@@ -1,12 +1,17 @@
-<div class="PageNavigation">
-	  {% if page.previous.url %}
-	    <a class="prev" href="{{page.next.url}}">
-	    	<i class="fas fa-chevron-left"></i> {{page.next.title}}
-	    </a>
-	  {% endif %}
-	  {% if page.next.url %}
-	    <a class="next" href="{{page.previous.url}}">{{page.previous.title}}
-	    	<i class="fas fa-chevron-right"></i>
-	    </a>
-	  {% endif %}
+<div class="pagination-container">
+  <div class="pagination">
+    {% if page.previous.url %}
+      <a href="{{page.previous.url}}" class="pagination-link prev">
+        <i class="fas fa-chevron-left"></i>
+        <span class="pagination-text">{{page.previous.title | truncate: 20}}</span>
+      </a>
+    {% endif %}
+    
+    {% if page.next.url %}
+      <a href="{{page.next.url}}" class="pagination-link next">
+        <span class="pagination-text">{{page.next.title | truncate: 20}}</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    {% endif %}
+  </div>
 </div>

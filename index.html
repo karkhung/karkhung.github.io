@@ -17,10 +17,14 @@ layout: default
 		{% for post in site.posts %}
 			{% if post.layout == 'podcast' %}
 				<article class="podcast-list">
-					<img src="{{post.cover}}" alt="{{post.cover}}">
+					<div>
+						<img src="{{post.cover}}" alt="{{post.cover}}">
+						<p></p>
+					</div>
 					<div class="podcast-list-meta">
-						<p><span>ལས་རིམ {{post.episode}}: </span></p>
-						<p><a href="{{ post.url }}"> {{ post.title }}</a></p>
+						
+						<p><span>ལས་རིམ {{post.episode}}: </span><a href="{{ post.url }}"> {{ post.title }}</a></p>
+						
 						<span>
 							<i class="fa fa-clock"></i> {{post.length}} Minutes  |  
 							<i class="fa fa-calendar"></i> {{ post.time | date_to_string  }} 

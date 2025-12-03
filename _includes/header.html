@@ -87,39 +87,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
 	<nav>
 		<div class="nav-title">
-      <a href="{{site.baseurl}}/index.html"><img src="{{site.baseurl}}/assets/icons/logo-min.png" width="150px">
+      <a href="{{site.baseurl}}/index.html" class="logo">
+        <img src="{{site.baseurl}}/assets/icons/logo-min.png" width="100" alt="{{ site.title }}">
       </a>
-    <!-- Disabled pwa link shortcut
-      <div class="head-qr">
-        <img src="{{site.baseurl}}/assets/icons/qr.jpg" alt="qr-code" width="100px;">
-        <center></center>
-      </div>
-      <span class="add-button">
-         <i class="fa fa-plus-square"></i>
-         add to home
-       </span>  
+      
+      <!-- Mobile menu toggle button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
     </div>
-
--->
-</div>
-    <div class="nav-menu">
-      <a href="{{site.baseurl}}/index.html"><span>སྒྲ་མཛོད། </span><i class="fa fa-podcast" aria-hidden="true"></i></a>
-      <a href="{{site.baseurl}}/blog.html">ཟིན་བྲིས། <i class="fas fa-newspaper"></i></a>
-      <a href="{{site.baseurl}}/page/about">སྐར་ཁུང་གི་སྐོར་།  <i class="fa fa-female" aria-hidden="true"></i></a>
-    </div>
-	</nav>
-    <nav class="nav-mobile">
-      <a href="{{site.baseurl}}/index.html#">
-        <i class="fa fa-home" aria-hidden="true"></i>
-      </a>
-      <a href="{{site.baseurl}}/index.html">
-        <i class="fa fa-podcast" aria-hidden="true"></i>
-      </a>
-       <a href="{{site.baseurl}}/blog.html">
-        <i class="fa fa-newspaper" aria-hidden="true"></i>
-      </a>
-      <a href="{{site.baseurl}}/page/about">
-        <i class="fa fa-female" aria-hidden="true"></i>
-      </a>
-  </nav>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+      <ul class="nav-list">
+        <li><a href="{{site.baseurl}}/index.html"><i class="fa fa-podcast" aria-hidden="true"></i> <span>སྒྲ་མཛོད།</span></a></li>
+        <li><a href="{{site.baseurl}}/blog.html"><i class="fas fa-newspaper"></i> <span>ཟིན་བྲིས།</span></a></li>
+        <li><a href="{{site.baseurl}}/audiobook.html"><i class="fas fa-book"></i> <span>སྒྲ་དེབ།</span></a></li>
+        <li><a href="{{site.baseurl}}/page/about"><i class="fa fa-female" aria-hidden="true"></i> <span>སྐར་ཁུང་གི་སྐོར་།</span></a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<!-- Mobile Menu JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav-menu');
+  
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+      document.body.classList.toggle('nav-open');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+    });
+  }
+});
+</script>

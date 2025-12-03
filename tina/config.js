@@ -25,7 +25,7 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "_posts",
-         ui: {
+        ui: {
         filename: {
           slugify: values => {
             const postDate = values.time ? new Date(values.time) : new Date();
@@ -54,28 +54,33 @@ export default defineConfig({
             type: "string",
             name: "episode",
             label: "Episode",
+            required: true,
           },
           {
             type: "string",
             name: "file",
             label: "Audio URL",
+            required: true,
           },
           {
             label: "Date",
             name: "time",
             type: "datetime",
+            required: true,
           },
 
            {
             type: "image",
             name: "cover",
             label: "Thumbnail",
+            required: true,
           },
 
           {
             type: "string",
             name: "description",
             label: "Description",
+            required: true,
           },
           {
             type: "rich-text",
@@ -85,7 +90,68 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "audiobook",
+        lable: "audiobook",
+        path: "_audiobooks",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+           {
+            type: "string",
+            name: "series",
+            label: "Series",
+            required: true,
+          },
+          {
+            type: "number",
+            name: "chapter",
+            label: "Chapter",
+            required: true,
+          },
+           {
+            type: "string",
+            name: "audio_file",
+            label: "Audio URL",
+            required: true,
+          },
+         {
+            type: "image",
+            name: "cover",
+            label: "Cover",
+            required: true,
+          },
+           {
+            label: "Date",
+            name: "time",
+            type: "datetime",
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+            required: true,
+          },
+        ],
+        ui: {
+          filename: {
+            slugify: values => {
+              const postDate = values.time ? new Date(values.time) : new Date();
+              return `${postDate.toISOString().split("T")[0]}-chapter-${String(values.chapter || "").padStart(2, '0')}`.toLowerCase()
+                .replace(/[^\w\.\/-\s]/gi, "");
+            }
+          }
+        }
+      }
     ],
+    
   },
 
   search: {
