@@ -38,7 +38,8 @@ defaults:
 
 
 
-
+include:
+  - .well-known
 
 
 
@@ -49,12 +50,13 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 
 # GitHub Pages plugins (whitelisted)
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-github-metadata
-  - jekyll-remote-theme
+# plugins:
+#   - jekyll-feed
+#   - jekyll-seo-tag
+#   - jekyll-sitemap
+#   - jekyll-github-metadata
+#   - jekyll-remote-theme
+
 
 # Exclude files from processing
 exclude:
@@ -80,7 +82,12 @@ exclude:
   - .tina/__generated__/**/**/*
   
 # Add this line to explicitly disable jekyll-avatar
-gems:
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap

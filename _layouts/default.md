@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
+{% include header.html %}
 
 {{ content }}
 
 
 
 
-{% include mobile-nav.html %}
+{% include footer.html %}

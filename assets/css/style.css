@@ -34,7 +34,7 @@
   --info: #3b82f6;        /* Blue */
   
   /* UI Elements */
-  --border: #334155;      /* Border color */
+  --border: #bd5707;      /* Border color */
   --shadow-1: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-2: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --radius: 8px;
@@ -118,7 +118,7 @@ header {
   z-index: 50;
   background: rgba(15, 23, 42, 0.95);
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--border);
+
   width: 100%;
 }
 
@@ -152,7 +152,7 @@ nav {
 }
 
 .nav-menu a {
-  color: var(--text-muted);
+  color: var(--border);
   text-decoration: none;
   font-size: 0.95rem;
   padding: 0.6rem 1rem;
@@ -202,6 +202,25 @@ nav {
     width: 100%;
   }
 }
+
+
+
+.top-widget{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  
+}
+.top-widget h3{
+  background-color: #c85b03;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: qomo-title;
+  text-align: center;
+  color:#2b448e;
+}
+
 .full-width,
 .f-widget,
 .grid-blog,
@@ -233,9 +252,9 @@ nav {
 .podcast-list,.blog-list {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: 1.5rem;
-  margin: 1rem 0;
-  padding: 1.25rem;
+  grid-gap: 10px;
+  grid-auto-rows: min-content;
+  padding: 5px 20px
   background: var(--bg-secondary);
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -275,8 +294,9 @@ nav {
 }
 
 .podcast-list img {
-  width: 100px;
-  height: 100px;
+
+  width: 100%;
+  height: full;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -292,7 +312,7 @@ nav {
 .podcast-list-meta {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .podcast-list-meta p {
@@ -302,7 +322,7 @@ nav {
 }
 
 .podcast-list-meta a {
-  color: var(--text);
+  color: var(--border);
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.2s ease;
@@ -346,8 +366,7 @@ nav {
 
 /* Date and duration */
 .podcast-list-meta > span {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.8rem;
   color: var(--text-muted);
@@ -680,6 +699,11 @@ nav {
   /* Mobile navigation */
   .mobile-nav {
     display: block;
+    position:fixed;
+    
+    bottom:0;
+    right:0;
+    z-index:1000;
   }
   
   /* Share buttons */
@@ -870,3 +894,84 @@ aside i {
   width: 1.25rem;
   text-align: center;
 }
+
+@keyframes twinkle {
+					0% { opacity: 0.2; }
+					50% { opacity: 1; }
+					100% { opacity: 0.2; }
+				}
+
+				@keyframes float {
+					0% { transform: translateY(0px); }
+					50% { transform: translateY(-5px); }
+					100% { transform: translateY(0px); }
+				}
+
+				@keyframes glow {
+					0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073; }
+					50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6; }
+					100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073; }
+				}
+
+				.starry-marquee {
+					position: relative;
+					overflow: hidden;
+					padding: 20px 0;
+					background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+					border-radius: 8px;
+					box-shadow: 0 0 20px rgba(0,0,0,0.5);
+				}
+
+				.stars, .twinkling {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 100%;
+				}
+
+				.stars {
+					background: #000 url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="0.5" fill="white"/><circle cx="20" cy="30" r="0.5" fill="white"/><circle cx="30" cy="15" r="0.5" fill="white"/><circle cx="40" cy="40" r="0.5" fill="white"/><circle cx="50" cy="25" r="0.5" fill="white"/><circle cx="60" cy="35" r="0.5" fill="white"/><circle cx="70" cy="20" r="0.5" fill="white"/><circle cx="80" cy="30" r="0.5" fill="white"/><circle cx="90" cy="15" r="0.5" fill="white"/></svg>');
+					animation: twinkle 4s infinite;
+				}
+
+				.twinkling {
+					background: transparent url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="25" r="0.8" fill="white"/><circle cx="25" cy="10" r="0.8" fill="white"/><circle cx="35" cy="30" r="0.8" fill="white"/><circle cx="45" cy="15" r="0.8" fill="white"/><circle cx="55" cy="35" r="0.8" fill="white"/><circle cx="65" cy="20" r="0.8" fill="white"/><circle cx="75" cy="30" r="0.8" fill="white"/><circle cx="85" cy="15" r="0.8" fill="white"/><circle cx="95" cy="25" r="0.8" fill="white"/></svg>');
+					animation: twinkle 3s infinite reverse;
+				}
+
+				.marquee-container {
+					position: relative;
+					overflow: hidden;
+					white-space: nowrap;
+					width: 100%;
+					z-index: 2;
+				}
+
+				.marquee {
+					display: inline-block;
+					animation: marquee 20s linear infinite;
+				}
+
+				@keyframes marquee {
+					0% { transform: translateX(100%); }
+					100% { transform: translateX(-100%); }
+				}
+
+				.marquee h3 {
+					display: inline-block;
+					color: #fff;
+					padding: 10px 20px;
+					margin: 0;
+					animation: glow 2s ease-in-out infinite, float 3s ease-in-out infinite;
+				}
+
+				.marquee h3 span {
+					display: inline-block;
+					animation: twinkle 2s infinite;
+					margin: 0 10px;
+				}
+
+				.marquee h3 span:nth-child(2) {
+					animation-delay: 0.5s;
+				}

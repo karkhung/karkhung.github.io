@@ -1,17 +1,26 @@
 ---
 layout: default
 ---
-
-{% include header.html %}
 <div class="container">
-	<div class="section-title">
-		<!--
-		<h1>སྒྲ་མཛོད།<i class="fa fa-podcast"></i></h1>
+	<div class="">
 		
-		<div class="social">
-			{% include share-bar.html %}
+		<div class="starry-marquee">
+			<div class="stars"></div>
+			<div class="twinkling"></div>
+			<div class="marquee-container">
+				<div class="marquee">
+					<a target="_blank" href="https://763f371c.khorlo.pages.dev">
+						<h3 class="glow">
+							<span>★</span> སྐར་ཁུང་གི་ཁ་བརྡ་ཁང་ནང་ཕེབས་ཤོག <span>★</span>
+						</h3>
+					</a>
+				</div>
+			</div>
+			<style>
+				
+			</style>
 		</div>
-	-->
+	
 	</div>
 	<section class="grid-podcast">
 		{% for post in site.posts %}
@@ -22,9 +31,11 @@ layout: default
 						<p></p>
 					</div>
 					<div class="podcast-list-meta">
-						
-						<p><span>ལས་རིམ {{post.episode}}: </span><a href="{{ post.url }}"> {{ post.title }}</a></p>
-						
+						<div>
+						<span>ལས་རིམ {{post.episode}}: </span>
+						<p><a href="{{ post.url }}"> {{ post.title }}</a></p>
+						</div>
+	
 						<span>
 							<i class="fa fa-clock"></i> {{post.length}} Minutes  |  
 							<i class="fa fa-calendar"></i> {{ post.time | date_to_string  }} 
@@ -63,4 +74,3 @@ layout: default
 	-->
 </div>
 
-{% include footer.html %}

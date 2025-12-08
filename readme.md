@@ -39,7 +39,7 @@
    ```
 3. Start the development server:
    ```bash
-   npx tinacms dev -c "bundle exec jekyll serve"
+   
    ```
 4. Access the site at `http://localhost:4000`
 5. Access TinaCMS admin at `http://localhost:4000/admin/`

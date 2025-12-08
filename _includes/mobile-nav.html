@@ -1,14 +1,71 @@
 <nav class="nav-mobile">
-      <a href="{{site.baseurl}}/index.html#">
+      <a href="{{site.baseurl}}/index.html#" class="nav-item">
         <i class="fa fa-home" aria-hidden="true"></i>
+        <span class="nav-text">Home</span>
       </a>
-      <a href="{{site.baseurl}}/index.html">
+      <a href="{{site.baseurl}}/index.html" class="nav-item">
         <i class="fa fa-podcast" aria-hidden="true"></i>
+        <span class="nav-text">སྒྲ་མཛོད།</span>
       </a>
-       <a href="{{site.baseurl}}/blog.html">
+      <a href="{{site.baseurl}}/blog.html" class="nav-item">
         <i class="fa fa-newspaper" aria-hidden="true"></i>
+        <span class="nav-text">ཟིན་བྲིས། </span>
       </a>
-      <a href="{{site.baseurl}}/page/about">
-        <i class="fa fa-female" aria-hidden="true"></i>
+      <a href="{{site.baseurl}}/page/audiobook" class="nav-item">
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <span class="nav-text">སྒྲ་དེབ།</span>
       </a>
-  </nav>
+</nav>
+<style>
+/* Mobile Navigation */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border);
+  z-index: 1000;
+  padding: 8px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-mobile .nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 6px 0;
+  transition: all 0.2s ease;
+}
+
+.nav-mobile .nav-item i {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.nav-mobile .nav-item .nav-text {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+.nav-mobile .nav-item:hover,
+.nav-mobile .nav-item:focus {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Show only on mobile devices */
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+</style>
