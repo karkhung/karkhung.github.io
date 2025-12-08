@@ -26,7 +26,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-github-metadata"
   gem "jekyll-remote-theme"
-  gem "jekyll-avatar", "0.0.0", require: false
+  gem "jekyll-avatar", "0.7.0", require: false
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
