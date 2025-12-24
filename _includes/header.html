@@ -13,6 +13,7 @@
   <meta content="website" property="og:type">
 {% endif %}
 
+
 {% if page.description %}
   <meta content="{{ page.description }}" property="og:description">
 {% else %}
@@ -42,19 +43,19 @@
 {% endif %}
 
 	<title>{{site.title}} || {{page.episode}}</title>
-  <link rel="icon" href="{{site.baseurl}}/assets/icons/icon-sm.png" type="image/x-icon" sizes="16x16">
+  <link rel="icon" href="{{ site.url }}{{ site.baseurl }}/assets/icons/icon-sm.png" type="image/x-icon" sizes="16x16">
 
-	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css">
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" /> 
-	<link rel="stylesheet" href="{{site.baseurl}}/assets/fontawesome/css/fontawesome.min.css" type="text/css">
-	<link rel="stylesheet" href="{{site.baseurl}}/assets/fontawesome/css/all.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/fontawesome/css/fontawesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/fontawesome/css/all.css" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#5f5eaa">
   <meta name="msapplication-TileColor" content="#5f5eaa">
   <meta name="msapplication-navbutton-color" content="#5f5eaa">
   <meta name="apple-mobile-web-app-status-bar-style" content="#5f5eaa">
-  <link type="application/rss+xml" rel="alternate" title="Title_Value" href="{{site.baseurl}}../podcast-google.xml"/>
-  <script type="text/javascript" src="{{site.baseurl}}/assets/js/main.js"></script>
+  <link type="application/rss+xml" rel="alternate" title="Title_Value" href="{{ site.url }}{{ site.baseurl }}/podcast-google.xml"/>
+  <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}/assets/js/main.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69420725-21"></script>
 <script>
@@ -87,8 +88,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
 	<nav>
 		<div class="nav-title">
-      <a href="{{site.baseurl}}/index.html" class="logo">
-        <img src="{{site.baseurl}}/assets/icons/logo-min.png" width="100" alt="{{ site.title }}">
+      <a href="{{ site.url }}{{ site.baseurl }}/index.html" class="logo">
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/icons/logo-min.png" width="100" alt="{{ site.title }}">
       </a>
       
       <!-- Mobile menu toggle button -->
@@ -98,10 +99,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Navigation Menu -->
     <nav class="nav-menu">
       <ul class="nav-list">
-        <li><a href="{{site.baseurl}}/index.html"><i class="fa fa-podcast" aria-hidden="true"></i> <span>སྒྲ་མཛོད།</span></a></li>
-        <li><a href="{{site.baseurl}}/blog.html"><i class="fas fa-newspaper"></i> <span>ཟིན་བྲིས།</span></a></li>
-        <li><a href="{{site.baseurl}}/audiobook.html"><i class="fas fa-book"></i> <span>སྒྲ་དེབ།</span></a></li>
-        <li><a href="{{site.baseurl}}/page/about"><i class="fa fa-female" aria-hidden="true"></i> <span>སྐར་ཁུང་གི་སྐོར་།</span></a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/index.html"><i class="fa fa-podcast" aria-hidden="true"></i> <span>སྒྲ་མཛོད།</span></a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/blog.html"><i class="fas fa-newspaper"></i> <span>ཟིན་བྲིས།</span></a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/audiobook.html"><i class="fas fa-book"></i> <span>སྒྲ་དེབ།</span></a></li>
+        <li><a href="{{ site.url }}{{ site.baseurl }}/page/about"><i class="fa fa-female" aria-hidden="true"></i> <span>སྐར་ཁུང་གི་སྐོར་།</span></a></li>
       </ul>
     </nav>
   </div>
