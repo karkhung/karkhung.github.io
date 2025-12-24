@@ -75,7 +75,6 @@ exclude:
   - .sass-cache
   - .bundle
   - tina
-  - admin
   - .tina
   - .tina/__generated__
   - .tina/__generated__/**/*

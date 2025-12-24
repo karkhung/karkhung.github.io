@@ -15,7 +15,9 @@ layout: audiobook
         <img src="{{series.items.first.cover}}" alt="">
         <h2>{{ series.items.first.series }}</h2>
         <p>{{ series.items.size }} chapters</p>
-        <a href="/audiobooks/{{ series.name }}/">View Series</a> 
+        {% if series.name %}
+          <a href="/audiobooks/{{ series.name}}.html">View Series</a>
+        {% endif %}
       </article>
     {% endfor %}
 

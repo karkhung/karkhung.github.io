@@ -94,18 +94,33 @@ export default defineConfig({
         name: "audiobook",
         lable: "audiobook",
         path: "_audiobooks",
+        defaultItem: {
+          layout: "audiobook"
+        },
         fields: [
+           {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+            required: true,
+          },
+           {
+            type: "string",
+            name: "series_slug",
+            label: "Series Slug",
+            required: true,
+          },
           {
             type: "string",
             name: "title",
-            label: "Title",
+            label: "Book Title",
             isTitle: true,
             required: true,
           },
            {
             type: "string",
             name: "series",
-            label: "Series",
+            label: "Series Title",
             required: true,
           },
           {
@@ -124,7 +139,6 @@ export default defineConfig({
             type: "image",
             name: "cover",
             label: "Cover",
-            required: true,
           },
            {
             label: "Date",
