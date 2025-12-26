@@ -8,7 +8,6 @@ layout: series
       <!-- <img src="{{ page.cover }}" alt="{{ page.series_title }} Cover"> -->
     <div class="series-description">
        <h1>{{ page.series_title }}</h1>
-      {{ content }}
     </div>
     </div>
 
@@ -17,9 +16,14 @@ layout: series
       {% for chapter in chapters %}
       <article class="chapter-item">
         <div class="chapter-meta">
-          <h3>Chapter {{ chapter.chapter }}: {{ chapter.series }}</h3>
+          <h3>ལེའུ་ {{ chapter.chapter }}: {{ chapter.series }}</h3>
           <!-- <p class="chapter-meta-sub">Duration: {{ chapter.duration }} <a href="{{ chapter.url }}">Read More</a></p> -->
-           <p class="chapter-meta-sub">{{content}}</p>
+           <p class="chapter-meta-sub">
+           {% assign parts = chapter.content | split: "<!--part-->" %}
+           {% for part in parts %}  
+        {{ part.content }}
+        {% endfor %}
+           </p>  
         </div>
 
         <div class="audio-inline-player">

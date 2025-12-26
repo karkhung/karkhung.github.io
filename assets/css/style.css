@@ -394,6 +394,35 @@ nav {
   }
 }
 
+/* Make images a bit smaller on phones globally and for specific components */
+@media (max-width: 480px) {
+  /* Reduce general image footprint inside main container */
+  .container img,
+  .audiobook-banner img,
+  .series-description img,
+  .podcast-list img,
+  .chapter-item img {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    max-height: 180px;
+    margin: 0 auto 0.75rem auto;
+    display: block;
+  }
+}
+
+/* Slightly smaller still for very small phones */
+@media (max-width: 360px) {
+  .container img,
+  .audiobook-banner img,
+  .series-description img,
+  .podcast-list img,
+  .chapter-item img {
+    max-width: 86%;
+    max-height: 150px;
+  }
+}
+
 .series-card h2{ margin: 8px 0 6px; font-size:18px; color: #eaf0ff; }
 .series-card p{ margin:0 0 8px; color: #dbe7ff; }
 .series-card a{ color:#f3d519; font-weight:600; text-decoration:none }
