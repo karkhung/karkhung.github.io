@@ -5,12 +5,10 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main",
-  //clientId: 'b029955e-b004-4164-94dc-6e9f09fb7387',
- // token: '13b494feaa2388f3d9b172ab60d24a22504d7cef',
-clientId: process.env.TINA_CLIENT_ID,
-token: process.env.TINA_TOKEN,
+  clientId: "958e95b9-62bd-4811-8b53-8f4d617c2341",
+  token: "e9564fb95515f055a3c407c6d92aba5c4379f38e",
 
- build: {
+  build: {
     outputFolder: "admin",
     publicFolder: "_site",
   },
@@ -150,7 +148,7 @@ token: process.env.TINA_TOKEN,
 
   search: {
     tina: {
-      indexerToken: "49af88b0118166cf9f5b3099702eedd219aeb169",
+      indexerToken: "769d0131152c0813fb2146f35d44e092ad2d1ab5",
       stopwordLanguages: ["eng"],
     },
     indexBatchSize: 100,
