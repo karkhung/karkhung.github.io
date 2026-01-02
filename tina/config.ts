@@ -150,7 +150,7 @@ token: process.env.TINA_TOKEN,
 
   search: {
     tina: {
-      indexerToken: "bcd44eb9832f26ab9d3d17b1c39e7c55159ccfa8",
+      indexerToken: "49af88b0118166cf9f5b3099702eedd219aeb169",
       stopwordLanguages: ["eng"],
     },
     indexBatchSize: 100,
