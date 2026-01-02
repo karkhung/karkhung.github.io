@@ -1,0 +1,24 @@
+fragment PostParts on Post {
+  __typename
+  title
+  layout
+  episode
+  file
+  time
+  cover
+  description
+  body
+}
+
+fragment AudiobookParts on Audiobook {
+  __typename
+  layout
+  series_slug
+  title
+  series
+  chapter
+  audio_file
+  cover
+  time
+  body
+}
