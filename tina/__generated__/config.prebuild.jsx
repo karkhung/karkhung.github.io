@@ -1,8 +1,7 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
-var branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 var config_default = defineConfig({
-  branch,
+  branch: "main",
   //clientId: 'b029955e-b004-4164-94dc-6e9f09fb7387',
   // token: '13b494feaa2388f3d9b172ab60d24a22504d7cef',
   clientId: process.env.TINA_CLIENT_ID,
@@ -97,6 +96,11 @@ var config_default = defineConfig({
             type: "string",
             name: "author",
             label: "Author"
+          },
+          {
+            type: "string",
+            name: "series_slug",
+            label: "Series Slug"
           },
           {
             type: "image",

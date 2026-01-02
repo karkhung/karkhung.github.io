@@ -257,6 +257,7 @@ export type Audiobook = Node & Document & {
   series: Scalars['String']['output'];
   chapter: Scalars['Float']['output'];
   author?: Maybe<Scalars['String']['output']>;
+  series_slug?: Maybe<Scalars['String']['output']>;
   cover?: Maybe<Scalars['String']['output']>;
   audio_file: Scalars['String']['output'];
   time: Scalars['String']['output'];
@@ -282,6 +283,7 @@ export type AudiobookFilter = {
   series?: InputMaybe<StringFilter>;
   chapter?: InputMaybe<NumberFilter>;
   author?: InputMaybe<StringFilter>;
+  series_slug?: InputMaybe<StringFilter>;
   cover?: InputMaybe<ImageFilter>;
   audio_file?: InputMaybe<StringFilter>;
   time?: InputMaybe<DatetimeFilter>;
@@ -399,6 +401,7 @@ export type AudiobookMutation = {
   series?: InputMaybe<Scalars['String']['input']>;
   chapter?: InputMaybe<Scalars['Float']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
+  series_slug?: InputMaybe<Scalars['String']['input']>;
   cover?: InputMaybe<Scalars['String']['input']>;
   audio_file?: InputMaybe<Scalars['String']['input']>;
   time?: InputMaybe<Scalars['String']['input']>;
@@ -407,7 +410,7 @@ export type AudiobookMutation = {
 
 export type PostPartsFragment = { __typename: 'Post', title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body?: any | null };
 
-export type AudiobookPartsFragment = { __typename: 'Audiobook', title: string, layout: string, series: string, chapter: number, author?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null };
+export type AudiobookPartsFragment = { __typename: 'Audiobook', title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -433,7 +436,7 @@ export type AudiobookQueryVariables = Exact<{
 }>;
 
 
-export type AudiobookQuery = { __typename?: 'Query', audiobook: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type AudiobookQuery = { __typename?: 'Query', audiobook: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type AudiobookConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -445,7 +448,7 @@ export type AudiobookConnectionQueryVariables = Exact<{
 }>;
 
 
-export type AudiobookConnectionQuery = { __typename?: 'Query', audiobookConnection: { __typename?: 'AudiobookConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AudiobookConnectionEdges', cursor: string, node?: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type AudiobookConnectionQuery = { __typename?: 'Query', audiobookConnection: { __typename?: 'AudiobookConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AudiobookConnectionEdges', cursor: string, node?: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
@@ -468,6 +471,7 @@ export const AudiobookPartsFragmentDoc = gql`
   series
   chapter
   author
+  series_slug
   cover
   audio_file
   time
@@ -650,7 +654,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "http://localhost:4001/graphql",
+        url: "https://content.tinajs.io/1.6/content/b029955e-b004-4164-94dc-6e9f09fb7387/github/main",
         queries,
       })
     )
