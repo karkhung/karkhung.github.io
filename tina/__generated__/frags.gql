@@ -17,6 +17,7 @@ fragment AudiobookParts on Audiobook {
   series
   chapter
   author
+  series_slug
   cover
   audio_file
   time

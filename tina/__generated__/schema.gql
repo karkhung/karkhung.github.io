@@ -160,6 +160,7 @@ type Audiobook implements Node & Document {
   series: String!
   chapter: Float!
   author: String
+  series_slug: String
   cover: String
   audio_file: String!
   time: String!
@@ -185,6 +186,7 @@ input AudiobookFilter {
   series: StringFilter
   chapter: NumberFilter
   author: StringFilter
+  series_slug: StringFilter
   cover: ImageFilter
   audio_file: StringFilter
   time: DatetimeFilter
@@ -242,6 +244,7 @@ input AudiobookMutation {
   series: String
   chapter: Float
   author: String
+  series_slug: String
   cover: String
   audio_file: String
   time: String
