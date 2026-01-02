@@ -155,15 +155,15 @@ type PostConnection implements Connection {
 }
 
 type Audiobook implements Node & Document {
-  layout: String!
-  series_slug: String!
   title: String!
+  layout: String!
   series: String!
   chapter: Float!
-  audio_file: String!
+  author: String
   cover: String
+  audio_file: String!
   time: String!
-  body: JSON!
+  body: JSON
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -180,13 +180,13 @@ input NumberFilter {
 }
 
 input AudiobookFilter {
-  layout: StringFilter
-  series_slug: StringFilter
   title: StringFilter
+  layout: StringFilter
   series: StringFilter
   chapter: NumberFilter
-  audio_file: StringFilter
+  author: StringFilter
   cover: ImageFilter
+  audio_file: StringFilter
   time: DatetimeFilter
   body: RichTextFilter
 }
@@ -237,13 +237,13 @@ input PostMutation {
 }
 
 input AudiobookMutation {
-  layout: String
-  series_slug: String
   title: String
+  layout: String
   series: String
   chapter: Float
-  audio_file: String
+  author: String
   cover: String
+  audio_file: String
   time: String
   body: JSON
 }

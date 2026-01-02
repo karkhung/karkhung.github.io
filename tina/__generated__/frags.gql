@@ -12,13 +12,13 @@ fragment PostParts on Post {
 
 fragment AudiobookParts on Audiobook {
   __typename
-  layout
-  series_slug
   title
+  layout
   series
   chapter
-  audio_file
+  author
   cover
+  audio_file
   time
   body
 }
