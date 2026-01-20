@@ -45,7 +45,7 @@
 	<title>{{site.title}} || {{page.episode}}</title>
   <link rel="icon" href="{{ site.url }}{{ site.baseurl }}/assets/icons/icon-sm.png" type="image/x-icon" sizes="16x16">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css?v={{ site.time | date: '%s' }}">
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" /> 
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/fontawesome/css/fontawesome.min.css" type="text/css">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/fontawesome/css/all.css" type="text/css">
@@ -67,7 +67,6 @@
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c28190c7cec7455baffed77f10e2a9fb"}'></script><!-- End Cloudflare Web Analytics -->
 
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -83,7 +82,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV4TF6W"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 
 <header>
 	<nav>

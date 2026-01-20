@@ -40,14 +40,14 @@ defaults:
 
 include:
   - .well-known
-
+  - assets 
 
 
 # Build settings
 markdown: kramdown
 
 # GitHub Pages settings
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 
 # GitHub Pages plugins (whitelisted)
 # plugins:

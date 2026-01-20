@@ -4,7 +4,7 @@
   "description": "this is my first git",
   "main": "index.js",
   "scripts": {
-    "dev": "tinacms dev -c \"bundle exec jekyll serve\"",
+    "dev": "tinacms dev -c \"bundle exec jekyll serve --livereload\"",
     "build": "tinacms build && bundle exec jekyll build"
   },
   "keywords": [],
@@ -15,3 +15,4 @@
     "tinacms": "^2.9.5"
   }
 }
+

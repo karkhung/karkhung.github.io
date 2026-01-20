@@ -21,7 +21,7 @@ layout: series
            <p class="chapter-meta-sub">
            {% assign parts = chapter.content | split: "<!--part-->" %}
            {% for part in parts %}  
-        {{ part.content }}
+       {{ part | markdownify }}
         {% endfor %}
            </p>  
         </div>
@@ -31,6 +31,7 @@ layout: series
             <source src="{{ chapter.audio_file }}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
+          {{content}}
         </div>
       </article>
     {% endfor %}
