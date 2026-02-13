@@ -1,29 +1,29 @@
 ---
-layout: series
+layout: default
 ---
 {% include header.html %}
 <div class="container">
   <section class="audiobook-container">
     <div class="audiobook-banner">
       <!-- <img src="{{ page.cover }}" alt="{{ page.series_title }} Cover"> -->
-    <div class="series-description">
-       <h1>{{ page.series_title }}</h1>
-    </div>
+      <div class="series-description">
+        <h1>{{ page.series_title }}</h1>
+      </div>
     </div>
 
     <div class="audiobook-card" style="width: 100%;">
-      {% assign chapters = site.audiobooks | where: "title", page.title | sort: "chapter" | reverse %}
+      {% assign chapters = site.audiobooks | where: "series_slug", page.series_slug | sort: "chapter" | reverse %}
       {% for chapter in chapters %}
       <article class="chapter-item">
         <div class="chapter-meta">
           <h3>ལེའུ་ {{ chapter.chapter }}: {{ chapter.series }}</h3>
           <!-- <p class="chapter-meta-sub">Duration: {{ chapter.duration }} <a href="{{ chapter.url }}">Read More</a></p> -->
-           <p class="chapter-meta-sub">
-           {% assign parts = chapter.content | split: "<!--part-->" %}
-           {% for part in parts %}  
-       {{ part | markdownify }}
-        {% endfor %}
-           </p>  
+          <p class="chapter-meta-sub">
+            {% assign parts = chapter.content | split: "<!--part-->" %}
+            {% for part in parts %}
+            {{ part | markdownify }}
+            {% endfor %}
+          </p>
         </div>
 
         <div class="audio-inline-player">
@@ -34,11 +34,11 @@ layout: series
           {{content}}
         </div>
       </article>
-    {% endfor %}
+      {% endfor %}
     </div>
   </section>
-    
-  
+
+
 </div>
 
 
