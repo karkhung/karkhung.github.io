@@ -1,29 +1,7 @@
 ---
-layout: audiobook
+layout: default
 ---
 {% include header.html %}
 
-<div class="container">
-  <section class="grid-podcast " style="gap:28px;">
-    <!-- main grid: left = main content, right = chapter list / meta -->
-    
-
-    {% assign series_list = site.audiobooks | group_by: "series_slug" %}
-
-    {% for series in series_list %}
-     <article class="series-card">
-        <img src="{{series.items.first.cover}}" alt="">
-        <h2>{{ series.items.first.series }}</h2>
-        <p>{{ series.items.size }} chapters</p>
-        {% if series.name %}
-          <a href="/audiobooks/{{ series.name}}.html">ལེའུ་གཞན་དག་ལ་འདི་ནས་ཉན་ཐུབ།</a>
-        {% endif %}
-      </article>
-    {% endfor %}
-
-  </section>
-
-</div>
-
-{% include mobile-nav.html %}
+{{ content }}
 {% include footer.html %}
