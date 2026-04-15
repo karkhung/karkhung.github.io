@@ -54,6 +54,9 @@ jobs:
         env:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+
+      - name: Debug - check admin folder
+        run: ls -la _site/admin || echo "admin folder not found"
         
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
