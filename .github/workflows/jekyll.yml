@@ -53,7 +53,7 @@ jobs:
         env:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: npx tinacms build
+        run: npm ci && npm run build
 
       - name: Debug - check admin folder
         run: ls -la _site/admin || echo "admin folder not found"
