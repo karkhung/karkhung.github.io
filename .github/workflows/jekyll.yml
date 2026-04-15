@@ -55,17 +55,6 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npm ci && npm run build
 
-      - name: Debug - check admin folder
-        run: ls -la _site/admin || echo "admin folder not found"
-        
-      - name: Debug - check build output
-        run: |
-          echo "=== root folder ==="
-          ls -la
-          echo "=== tina folder ==="
-          ls -la .tina || echo "no .tina folder"
-          echo "=== _site folder ==="
-          ls -la _site
         
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
