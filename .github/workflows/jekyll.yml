@@ -16,7 +16,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -54,7 +54,14 @@ jobs:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npm ci && npm run build
-
+        
+      - name: Commit tina-lock.json
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add tina-lock.json
+          git diff --staged --quiet || git commit -m "chore: update tina-lock.json"
+          git push
         
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
