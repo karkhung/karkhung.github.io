@@ -55,13 +55,6 @@ jobs:
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npm ci && npm run build
         
-      - name: Commit tina-lock.json
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add tina-lock.json
-          git diff --staged --quiet || git commit -m "chore: update tina-lock.json"
-          git push
         
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
