@@ -3,4 +3,4 @@ _site/
 .jekkyll-cache
 node_modules
 .tina/__generated__
-.env.local
+.env
