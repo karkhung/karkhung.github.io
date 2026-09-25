@@ -7,13 +7,13 @@
     })
     return str
   }
-  export type Maybe<T> = T | null;
-export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
-export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = { [_ in K]?: never };
+  import type { TinaMarkdownContent } from 'tinacms/dist/rich-text';
+/** Internal type. DO NOT USE DIRECTLY. */
+type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+/** Internal type. DO NOT USE DIRECTLY. */
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
+export type Maybe<T> = T | null;
+export type InputMaybe<T> = Maybe<T>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: { input: string; output: string; }
@@ -24,6 +24,8 @@ export type Scalars = {
   /** References another document, used as a foreign key */
   Reference: { input: any; output: any; }
   JSON: { input: any; output: any; }
+  /** A rich-text document, renderable by TinaMarkdown */
+  RichText: { input: TinaMarkdownContent; output: TinaMarkdownContent; }
 };
 
 export type SystemInfo = {
@@ -192,7 +194,7 @@ export type Post = Node & Document & {
   time: Scalars['String']['output'];
   cover: Scalars['String']['output'];
   description: Scalars['String']['output'];
-  body?: Maybe<Scalars['JSON']['output']>;
+  body?: Maybe<Scalars['RichText']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -261,7 +263,7 @@ export type Audiobook = Node & Document & {
   cover?: Maybe<Scalars['String']['output']>;
   audio_file: Scalars['String']['output'];
   time: Scalars['String']['output'];
-  body?: Maybe<Scalars['JSON']['output']>;
+  body?: Maybe<Scalars['RichText']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -392,7 +394,7 @@ export type PostMutation = {
   time?: InputMaybe<Scalars['String']['input']>;
   cover?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+  body?: InputMaybe<Scalars['RichText']['input']>;
 };
 
 export type AudiobookMutation = {
@@ -405,50 +407,112 @@ export type AudiobookMutation = {
   cover?: InputMaybe<Scalars['String']['input']>;
   audio_file?: InputMaybe<Scalars['String']['input']>;
   time?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+  body?: InputMaybe<Scalars['RichText']['input']>;
 };
 
-export type PostPartsFragment = { __typename: 'Post', title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body?: any | null };
+export type StringFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
 
-export type AudiobookPartsFragment = { __typename: 'Audiobook', title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null };
+export type DatetimeFilter = {
+  after?: string | null | undefined;
+  before?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
+
+export type ImageFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<string | null | undefined> | null | undefined;
+};
+
+export type RichTextFilter = {
+  startsWith?: string | null | undefined;
+  eq?: string | null | undefined;
+  exists?: boolean | null | undefined;
+};
+
+export type PostFilter = {
+  title?: StringFilter | null | undefined;
+  layout?: StringFilter | null | undefined;
+  episode?: StringFilter | null | undefined;
+  file?: StringFilter | null | undefined;
+  time?: DatetimeFilter | null | undefined;
+  cover?: ImageFilter | null | undefined;
+  description?: StringFilter | null | undefined;
+  body?: RichTextFilter | null | undefined;
+};
+
+export type NumberFilter = {
+  lt?: number | null | undefined;
+  lte?: number | null | undefined;
+  gte?: number | null | undefined;
+  gt?: number | null | undefined;
+  eq?: number | null | undefined;
+  exists?: boolean | null | undefined;
+  in?: Array<number | null | undefined> | null | undefined;
+};
+
+export type AudiobookFilter = {
+  title?: StringFilter | null | undefined;
+  layout?: StringFilter | null | undefined;
+  series?: StringFilter | null | undefined;
+  chapter?: NumberFilter | null | undefined;
+  author?: StringFilter | null | undefined;
+  series_slug?: StringFilter | null | undefined;
+  cover?: ImageFilter | null | undefined;
+  audio_file?: StringFilter | null | undefined;
+  time?: DatetimeFilter | null | undefined;
+  body?: RichTextFilter | null | undefined;
+};
+
+export type PostPartsFragment = { __typename: 'Post', title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body: TinaMarkdownContent | null };
+
+export type AudiobookPartsFragment = { __typename: 'Audiobook', title: string, layout: string, series: string, chapter: number, author: string | null, series_slug: string | null, cover: string | null, audio_file: string, time: string, body: TinaMarkdownContent | null };
 
 export type PostQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type PostQuery = { __typename?: 'Query', post: { __typename: 'Post', id: string, title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type PostQuery = { post: { __typename: 'Post', id: string, title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type PostConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PostFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: PostFilter | null | undefined;
 }>;
 
 
-export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename: 'Post', id: string, title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type PostConnectionQuery = { postConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Post', id: string, title: string, layout: string, episode: string, file: string, time: string, cover: string, description: string, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type AudiobookQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
+  relativePath: string;
 }>;
 
 
-export type AudiobookQuery = { __typename?: 'Query', audiobook: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type AudiobookQuery = { audiobook: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author: string | null, series_slug: string | null, cover: string | null, audio_file: string, time: string, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type AudiobookConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<AudiobookFilter>;
+  before?: string | null | undefined;
+  after?: string | null | undefined;
+  first?: number | null | undefined;
+  last?: number | null | undefined;
+  sort?: string | null | undefined;
+  filter?: AudiobookFilter | null | undefined;
 }>;
 
 
-export type AudiobookConnectionQuery = { __typename?: 'Query', audiobookConnection: { __typename?: 'AudiobookConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'AudiobookConnectionEdges', cursor: string, node?: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author?: string | null, series_slug?: string | null, cover?: string | null, audio_file: string, time: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type AudiobookConnectionQuery = { audiobookConnection: { totalCount: number, pageInfo: { hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges: Array<{ cursor: string, node: { __typename: 'Audiobook', id: string, title: string, layout: string, series: string, chapter: number, author: string | null, series_slug: string | null, cover: string | null, audio_file: string, time: string, body: TinaMarkdownContent | null, _sys: { filename: string, basename: string, hasReferences: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
@@ -666,5 +730,7 @@ export const queries = (
   const requester = generateRequester(client)
   return getSdk(requester)
 }
+
+export type { Exact };
 
   

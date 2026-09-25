@@ -6,15 +6,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "tinacms dev -c \"bundle exec jekyll serve --livereload\"",
-    "build": "bundle exec jekyll build && tinacms build --skip-cloud-checks"
+    "build": "tinacms build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tinacms/cli": "^2.2.2",
-    "@tinacms/schema-tools": "^2.7.1",
+    "@tinacms/cli": "^3.1.0",
+    "@tinacms/schema-tools": "^2.10.0",
     "next-tinacms-s3": "^21.0.3",
-    "tinacms": "^3.7.2"
+    "tinacms": "^3.14.1"
   }
 }
